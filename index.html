@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saurabh Nair | Full Stack Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #030712;
+            --bg-alt: #0b1120;
+            --card: rgba(15, 23, 42, 0.75);
+            --glass: rgba(255, 255, 255, 0.08);
+            --accent: #38bdf8;
+            --accent-2: #f472b6;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: rgba(148, 163, 184, 0.2);
+            --shadow: 0 25px 50px rgba(15, 23, 42, 0.55);
+            background-color: var(--bg);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 45%),
+                radial-gradient(circle at 20% 20%, rgba(244, 114, 182, 0.25), transparent 40%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px 120px;
+        }
+
+        header.hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 0 30px;
+            align-items: center;
+        }
+
+        .hero-content {
+            backdrop-filter: blur(14px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            background: linear-gradient(160deg, rgba(56, 189, 248, 0.08), rgba(15, 23, 42, 0.6));
+            box-shadow: var(--shadow);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-size: clamp(2.4rem, 6vw, 3.8rem);
+            line-height: 1.1;
+            margin: 0 0 12px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 24px 0 32px;
+        }
+
+        .contact-card {
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: rgba(148, 163, 184, 0.07);
+        }
+
+        .contact-card span {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .contact-card a {
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 360px;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            border-radius: 32px;
+            object-fit: cover;
+            height: 100%;
+            filter: saturate(1.1);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .floating-card {
+            position: absolute;
+            bottom: -25px;
+            right: 10%;
+            background: var(--card);
+            padding: 18px 22px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            max-width: 240px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-card strong {
+            font-size: 1.3rem;
+            color: var(--accent);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .stat-card {
+            border-radius: 18px;
+            padding: 16px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .stat-card h3 {
+            margin: 8px 0 4px;
+            font-size: 1.4rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .tabs-wrapper {
+            margin-top: 70px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            background: rgba(2, 6, 23, 0.85);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .tab-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 18px;
+            background: rgba(15, 23, 42, 0.65);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-list button {
+            flex: 1 0 150px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .tab-list button.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #020617;
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+        }
+
+        .tab-panel {
+            display: none;
+            padding: 30px;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fade 0.4s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timeline {
+            display: grid;
+            gap: 24px;
+        }
+
+        .timeline-card {
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.75);
+        }
+
+        .timeline-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .timeline-card .meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .chip-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .chip {
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(148, 163, 184, 0.08);
+            font-size: 0.9rem;
+        }
+
+        ul.highlight-list {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .tab-list {
+                flex-direction: column;
+            }
+
+            .tab-panel {
+                padding: 22px;
+            }
+
+            .hero-content {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="hero">
+            <section class="hero-content">
+                <div class="hero-badge">Full Stack Data Scientist · AI Architect</div>
+                <h1>Saurabh Nair</h1>
+                <p class="subtitle">
+                    Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS, Azure, and
+                    next-gen LLM stacks. Tenacious about measurable business lift, governance, and delightful stakeholder experiences.
+                </p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <span>Phone</span>
+                        <a href="tel:+917977144438">+91 7977144438</a>
+                    </div>
+                        <div class="contact-card">
+                        <span>Email</span>
+                        <a href="mailto:nsaurabh777@gmail.com">nsaurabh777@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <span>LinkedIn</span>
+                        <a href="https://linkedin.com/in/nsaurabh777" target="_blank" rel="noopener">linkedin.com/in/nsaurabh777</a>
+                    </div>
+                    <div class="contact-card">
+                        <span>GitHub</span>
+                        <a href="https://github.com/nsaurabh777" target="_blank" rel="noopener">github.com/nsaurabh777</a>
+                    </div>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <span class="muted">Experience</span>
+                        <h3>8+ yrs</h3>
+                        <p>Enterprise AI & data science leadership</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="muted">Impact</span>
+                        <h3>93%+</h3>
+                        <p>Intent accuracy with LLM-on-Snowflake Cortex</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="muted">Speaking</span>
+                        <h3>DataHack '23</h3>
+                        <p>Predictive Maintenance with OCR & NLP</p>
+                    </div>
+                </div>
+            </section>
+            <section class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+                    alt="Futuristic workspace representing AI craftsmanship" />
+                <div class="floating-card">
+                    <strong>Team of the Year 2024–25</strong>
+                    <p>Jet2 Travel Technologies · Multi-label intent platform powered by Mistral LLM & Snowflake Cortex.</p>
+                </div>
+            </section>
+        </header>
+
+        <section class="tabs-wrapper" aria-live="polite">
+            <div class="tab-list">
+                <button class="active" data-tab="experience">Experience</button>
+                <button data-tab="skills">Skills Matrix</button>
+                <button data-tab="projects">Projects & Impact</button>
+                <button data-tab="education">Education & Credentials</button>
+            </div>
+
+            <article class="tab-panel active" id="experience" role="tabpanel">
+                <div class="timeline">
+                    <div class="timeline-card">
+                        <h3>Senior Machine Learning Engineer · Jet2 Travel Technologies</h3>
+                        <p class="meta">Aug 2022 – Present · Pune (Remote)</p>
+                        <ul class="highlight-list">
+                            <li>Spearheaded a multi-class, multi-label intent model on Snowflake Cortex + Mistral in 60 days, hitting 93% accuracy and winning Team of the Year 2024–25.</li>
+                            <li>Built an LLM-as-a-Judge governance loop to arbitrate edge-case intents, removing ambiguity across semantically similar classes.</li>
+                            <li>Architected a unified Snowflake DS fabric integrating AWS SageMaker, Dataiku, Hex, Tableau, and Snowsight for seamless collaboration.</li>
+                            <li>Led strategic migrations from Dataiku DSS to SageMaker, uplifting scalability, CI/CD, and cost efficiency.</li>
+                            <li>Automated retraining triggers in Dataiku for drift-aware redeployments and instrumented real-time Tableau ops monitoring.</li>
+                            <li>Integrated Azure Artifact Registry + Snyk to harden Python supply chain security across Hex, DSS, and SageMaker.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Data Scientist · Paytm</h3>
+                        <p class="meta">Feb 2022 – Aug 2022 · Mumbai</p>
+                        <ul class="highlight-list">
+                            <li>Raised conversion lift by 40% by deploying CatBoost propensity models tailoring channels & cadences.</li>
+                            <li>Operationalized regression-based notification frequency optimizers and behavioral segmenters for precision marketing.</li>
+                            <li>Unified omnichannel KPIs into interactive strategy dashboards, slashing decision latency by 45%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Data Scientist / Assistant Manager · Servify</h3>
+                        <p class="meta">Apr 2019 – Feb 2022 · Mumbai</p>
+                        <ul class="highlight-list">
+                            <li>Delivered ARIMA / SARIMA / LSTM ensembles for mission-critical forecasts.</li>
+                            <li>Achieved 73% recall on fraud detection pipelines and pushed CNN & FastAI segmentation models into production.</li>
+                            <li>Designed imputation accelerators via LightGBM & XGBoost to stabilize downstream models.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Data Analyst · Servify</h3>
+                        <p class="meta">Jun 2017 – Apr 2019 · Mumbai</p>
+                        <ul class="highlight-list">
+                            <li>Built a Django REST + RabbitMQ reporting fabric delivering real-time analytics.</li>
+                            <li>Partnered with supply chain to stand up IMS analytics and scrapers for 10k+ smartphone SKUs.</li>
+                            <li>Optimized SQL workloads to cut extraction latency by 60%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tab-panel" id="skills" role="tabpanel">
+                <div class="grid-2">
+                    <div class="timeline-card">
+                        <h3>Programming & Frameworks</h3>
+                        <div class="chip-grid">
+                            <span class="chip">Python</span>
+                            <span class="chip">R</span>
+                            <span class="chip">SQL</span>
+                            <span class="chip">Django REST</span>
+                            <span class="chip">Terraform</span>
+                            <span class="chip">Docker</span>
+                        </div>
+                        <p class="meta">End-to-end APIs, automation, and infrastructure as code.</p>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Machine Learning & AI</h3>
+                        <div class="chip-grid">
+                            <span class="chip">LLMs & Generative AI</span>
+                            <span class="chip">Time Series</span>
+                            <span class="chip">Computer Vision</span>
+                            <span class="chip">NLP</span>
+                            <span class="chip">MLOps</span>
+                            <span class="chip">Model Monitoring</span>
+                        </div>
+                        <p class="meta">From experimentation to governed deployments and observability.</p>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Data Engineering & Architecture</h3>
+                        <div class="chip-grid">
+                            <span class="chip">Snowflake</span>
+                            <span class="chip">Hadoop</span>
+                            <span class="chip">Spark</span>
+                            <span class="chip">Kafka</span>
+                            <span class="chip">Hive</span>
+                            <span class="chip">Druid</span>
+                            <span class="chip">AWS SageMaker</span>
+                            <span class="chip">Azure</span>
+                        </div>
+                        <p class="meta">Hybrid-cloud architectures with automated model deployment workflows.</p>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Analytics, Visualization & Databases</h3>
+                        <div class="chip-grid">
+                            <span class="chip">Tableau</span>
+                            <span class="chip">Streamlit</span>
+                            <span class="chip">Superset</span>
+                            <span class="chip">Hex</span>
+                            <span class="chip">Pandas / PySpark</span>
+                            <span class="chip">Snowflake</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">MongoDB</span>
+                        </div>
+                        <p class="meta">Executive-ready storytelling anchored in governed, queryable data.</p>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Tooling & Governance</h3>
+                        <div class="chip-grid">
+                            <span class="chip">Git & CI/CD</span>
+                            <span class="chip">RabbitMQ</span>
+                            <span class="chip">Snyk</span>
+                            <span class="chip">Azure Artifact Registry</span>
+                            <span class="chip">Feature Engineering</span>
+                            <span class="chip">Data Governance</span>
+                            <span class="chip">Experimentation</span>
+                        </div>
+                        <p class="meta">Security-forward pipelines that scale safely.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tab-panel" id="projects" role="tabpanel">
+                <div class="timeline">
+                    <div class="timeline-card">
+                        <h3>Projects & Challenges</h3>
+                        <ul class="highlight-list">
+                            <li>Analytics Vidhya Job-a-thon: secured 6th position through rapid feature engineering and gradient boosting mastery.</li>
+                            <li>Lead Conversion Intelligence: built classification stacks to pinpoint high-potential insurance and credit leads.</li>
+                            <li>Forecast Suites: architected regression + time-series hybrids for house pricing and supplement sales forecasts.</li>
+                            <li>Speech-to-Text Engine: delivered a DeepSpeech pipeline, showcasing audio NLP excellence.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Achievements & Highlights</h3>
+                        <ul class="highlight-list">
+                            <li>Speaker, DataHack Summit 2023 — “End-to-End ML Pipeline for Predictive Maintenance using OCR & NLP.”</li>
+                            <li>Multiple Employee of the Quarter awards (Jet2 Travel Technologies) & Employee of the Year nomination.</li>
+                            <li>Rising Star Award at Paytm for innovation and impact.</li>
+                            <li>National-level Hockey Player & Taekwondo Black Belt showcasing leadership and resilience.</li>
+                            <li>Personal recommendation letter from CEO, Patronus Creative.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tab-panel" id="education" role="tabpanel">
+                <div class="timeline">
+                    <div class="timeline-card">
+                        <h3>MBA Tech IT · NMIMS University</h3>
+                        <p class="meta">Mukesh Patel School Of Technology Management & Engineering · Mumbai · 2012 – 2017
+                            <br />Major: Business Intelligence & Analytics · CGPA 3.21/4
+                        </p>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Higher Secondary Certificate</h3>
+                        <p class="meta">Mithibai College · Mumbai · 2011 – 2012 · 74.67%</p>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Secondary School Certificate</h3>
+                        <p class="meta">St. Francis D’Assisi High School · Mumbai · 2009 – 2010 · 84.36%</p>
+                    </div>
+                    <div class="timeline-card">
+                        <h3>Certifications</h3>
+                        <ul class="highlight-list">
+                            <li>Machine Learning – Analytics Vidhya (Oct 2021)</li>
+                            <li>Natural Language Processing – Analytics Vidhya (Oct 2021)</li>
+                            <li>Ethical Hacking (May 2015)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            © <span id="year"></span> Saurabh Nair · Built with curiosity, empathy, and resilient ML pipelines.
+        </footer>
+    </main>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-list button');
+        const panels = document.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const target = button.dataset.tab;
+
+                tabButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
+                panels.forEach((panel) => panel.classList.toggle('active', panel.id === target));
+            });
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

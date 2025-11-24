@@ -1,0 +1,22 @@
+# Local OS noise
+.DS_Store
+
+# Dependency directories (future-proof)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment/config secrets
+.env
+.env.local
+
+# IDE metadata
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+data/
