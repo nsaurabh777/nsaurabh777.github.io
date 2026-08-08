@@ -5,320 +5,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Saurabh Nair | Full Stack Data Scientist</title>
+    <meta name="description"
+        content="Portfolio of Saurabh Nair, a Full Stack Data Scientist and AI Architect with 8+ years building production ML, LLM, and MLOps systems on Snowflake, AWS, and Azure." />
+    <meta name="theme-color" content="#030712" />
+    <link rel="canonical" href="https://nsaurabh777.github.io/" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Saurabh Nair | Full Stack Data Scientist" />
+    <meta property="og:description"
+        content="Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS, Azure, and next-gen LLM stacks." />
+    <meta property="og:url" content="https://nsaurabh777.github.io/" />
+    <meta property="og:image" content="https://nsaurabh777.github.io/assets/images/hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saurabh Nair | Full Stack Data Scientist" />
+    <meta name="twitter:description"
+        content="Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS, Azure, and next-gen LLM stacks." />
+    <meta name="twitter:image" content="https://nsaurabh777.github.io/assets/images/hero.webp" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
         rel="stylesheet" />
-    <style>
-        :root {
-            color-scheme: light dark;
-            --bg: #030712;
-            --bg-alt: #0b1120;
-            --card: rgba(15, 23, 42, 0.75);
-            --glass: rgba(255, 255, 255, 0.08);
-            --accent: #38bdf8;
-            --accent-2: #f472b6;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-            --border: rgba(148, 163, 184, 0.2);
-            --shadow: 0 25px 50px rgba(15, 23, 42, 0.55);
-            background-color: var(--bg);
+    <link rel="preload" href="assets/images/hero.webp" as="image" fetchpriority="high" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saurabh Nair",
+        "jobTitle": "Full Stack Data Scientist",
+        "url": "https://nsaurabh777.github.io/",
+        "email": "mailto:nsaurabh777@gmail.com",
+        "telephone": "+91-7977123456",
+        "sameAs": [
+            "https://linkedin.com/in/nsaurabh777",
+            "https://github.com/nsaurabh777"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "NMIMS University"
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 45%),
-                radial-gradient(circle at 20% 20%, rgba(244, 114, 182, 0.25), transparent 40%),
-                var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 24px 120px;
-        }
-
-        header.hero {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 60px 0 30px;
-            align-items: center;
-        }
-
-        .hero-content {
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 32px;
-            background: linear-gradient(160deg, rgba(56, 189, 248, 0.08), rgba(15, 23, 42, 0.6));
-            box-shadow: var(--shadow);
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 16px;
-            background: rgba(56, 189, 248, 0.1);
-        }
-
-        h1 {
-            font-family: 'Space Grotesk', 'Inter', sans-serif;
-            font-size: clamp(2.4rem, 6vw, 3.8rem);
-            line-height: 1.1;
-            margin: 0 0 12px;
-        }
-
-        .subtitle {
-            color: var(--muted);
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin: 24px 0 32px;
-        }
-
-        .contact-card {
-            padding: 14px 16px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            background: rgba(148, 163, 184, 0.07);
-        }
-
-        .contact-card span {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .contact-card a {
-            font-weight: 600;
-            color: var(--text);
-            text-decoration: none;
-        }
-
-        .hero-visual {
-            position: relative;
-            min-height: 360px;
-        }
-
-        .hero-visual img {
-            width: 100%;
-            border-radius: 32px;
-            object-fit: cover;
-            height: 100%;
-            filter: saturate(1.1);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .floating-card {
-            position: absolute;
-            bottom: -25px;
-            right: 10%;
-            background: var(--card);
-            padding: 18px 22px;
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            max-width: 240px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-card strong {
-            font-size: 1.3rem;
-            color: var(--accent);
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-        }
-
-        .stat-card {
-            border-radius: 18px;
-            padding: 16px 18px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-        }
-
-        .stat-card h3 {
-            margin: 8px 0 4px;
-            font-size: 1.4rem;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .tabs-wrapper {
-            margin-top: 70px;
-            border-radius: 30px;
-            border: 1px solid var(--border);
-            background: rgba(2, 6, 23, 0.85);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .tab-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            padding: 18px;
-            background: rgba(15, 23, 42, 0.65);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tab-list button {
-            flex: 1 0 150px;
-            padding: 12px 18px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            background: transparent;
-            color: var(--muted);
-            font-weight: 600;
-            font-family: 'Space Grotesk', sans-serif;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-
-        .tab-list button.active {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: #020617;
-            border-color: transparent;
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
-        }
-
-        .tab-panel {
-            display: none;
-            padding: 30px;
-        }
-
-        .tab-panel.active {
-            display: block;
-            animation: fade 0.4s ease;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .timeline {
-            display: grid;
-            gap: 24px;
-        }
-
-        .timeline-card {
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            padding: 20px;
-            background: rgba(15, 23, 42, 0.75);
-        }
-
-        .timeline-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        .timeline-card .meta {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .chip-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 18px 0;
-        }
-
-        .chip {
-            padding: 8px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            background: rgba(148, 163, 184, 0.08);
-            font-size: 0.9rem;
-        }
-
-        ul.highlight-list {
-            margin: 0;
-            padding-left: 20px;
-            color: var(--muted);
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 640px) {
-            .tab-list {
-                flex-direction: column;
-            }
-
-            .tab-panel {
-                padding: 22px;
-            }
-
-            .hero-content {
-                padding: 24px;
-            }
-        }
-    </style>
+    }
+    </script>
 </head>
 
 <body>
-    <main>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main id="main-content">
         <header class="hero">
             <section class="hero-content">
                 <div class="hero-badge">Full Stack Data Scientist · AI Architect</div>
@@ -330,9 +66,9 @@
                 <div class="contact-grid">
                     <div class="contact-card">
                         <span>Phone</span>
-                        <a href="tel:+917977144438">+91 7977144438</a>
+                        <a href="tel:+917977123456">+91 7977123456</a>
                     </div>
-                        <div class="contact-card">
+                    <div class="contact-card">
                         <span>Email</span>
                         <a href="mailto:nsaurabh777@gmail.com">nsaurabh777@gmail.com</a>
                     </div>
@@ -345,6 +81,7 @@
                         <a href="https://github.com/nsaurabh777" target="_blank" rel="noopener">github.com/nsaurabh777</a>
                     </div>
                 </div>
+                <h2 class="section-heading">Career highlights</h2>
                 <div class="stat-grid">
                     <div class="stat-card">
                         <span class="muted">Experience</span>
@@ -364,7 +101,7 @@
                 </div>
             </section>
             <section class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+                <img src="assets/images/hero.webp" width="900" height="1000" fetchpriority="high"
                     alt="Futuristic workspace representing AI craftsmanship" />
                 <div class="floating-card">
                     <strong>Team of the Year 2024–25</strong>
@@ -374,14 +111,20 @@
         </header>
 
         <section class="tabs-wrapper" aria-live="polite">
-            <div class="tab-list">
-                <button class="active" data-tab="experience">Experience</button>
-                <button data-tab="skills">Skills Matrix</button>
-                <button data-tab="projects">Projects & Impact</button>
-                <button data-tab="education">Education & Credentials</button>
+            <div class="tab-list" role="tablist" aria-label="Portfolio sections">
+                <button class="active" id="tab-experience" data-tab="experience" role="tab" aria-selected="true"
+                    aria-controls="experience" tabindex="0">Experience</button>
+                <button id="tab-skills" data-tab="skills" role="tab" aria-selected="false" aria-controls="skills"
+                    tabindex="-1">Skills Matrix</button>
+                <button id="tab-projects" data-tab="projects" role="tab" aria-selected="false"
+                    aria-controls="projects" tabindex="-1">Projects & Impact</button>
+                <button id="tab-education" data-tab="education" role="tab" aria-selected="false"
+                    aria-controls="education" tabindex="-1">Education & Credentials</button>
             </div>
 
-            <article class="tab-panel active" id="experience" role="tabpanel">
+            <article class="tab-panel active" id="experience" role="tabpanel" aria-labelledby="tab-experience"
+                tabindex="0">
+                <h2 class="section-heading">Experience</h2>
                 <div class="timeline">
                     <div class="timeline-card">
                         <h3>Senior Machine Learning Engineer · Jet2 Travel Technologies</h3>
@@ -428,7 +171,8 @@
                 </div>
             </article>
 
-            <article class="tab-panel" id="skills" role="tabpanel">
+            <article class="tab-panel" id="skills" role="tabpanel" aria-labelledby="tab-skills" tabindex="0" hidden>
+                <h2 class="section-heading">Skills Matrix</h2>
                 <div class="grid-2">
                     <div class="timeline-card">
                         <h3>Programming & Frameworks</h3>
@@ -503,7 +247,9 @@
                 </div>
             </article>
 
-            <article class="tab-panel" id="projects" role="tabpanel">
+            <article class="tab-panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0"
+                hidden>
+                <h2 class="section-heading">Projects & Impact</h2>
                 <div class="timeline">
                     <div class="timeline-card">
                         <h3>Projects & Challenges</h3>
@@ -527,7 +273,9 @@
                 </div>
             </article>
 
-            <article class="tab-panel" id="education" role="tabpanel">
+            <article class="tab-panel" id="education" role="tabpanel" aria-labelledby="tab-education" tabindex="0"
+                hidden>
+                <h2 class="section-heading">Education & Credentials</h2>
                 <div class="timeline">
                     <div class="timeline-card">
                         <h3>MBA Tech IT · NMIMS University</h3>
@@ -560,21 +308,7 @@
         </footer>
     </main>
 
-    <script>
-        const tabButtons = document.querySelectorAll('.tab-list button');
-        const panels = document.querySelectorAll('.tab-panel');
-
-        tabButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                const target = button.dataset.tab;
-
-                tabButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
-                panels.forEach((panel) => panel.classList.toggle('active', panel.id === target));
-            });
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
