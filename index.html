@@ -4,434 +4,284 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Saurabh Nair | Full Stack Data Scientist</title>
+    <title>Saurabh Nair | Full Stack Data Scientist &amp; AI Architect</title>
+    <meta name="description"
+        content="Portfolio of Saurabh Nair, a Full Stack Data Scientist and AI Architect with 8+ years building production ML, LLM, and MLOps systems on Snowflake, AWS, and Azure." />
+    <meta name="theme-color" content="#08080a" />
+    <link rel="canonical" href="https://nsaurabh777.github.io/" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Saurabh Nair | Full Stack Data Scientist &amp; AI Architect" />
+    <meta property="og:description"
+        content="Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS, Azure, and next-gen LLM stacks." />
+    <meta property="og:url" content="https://nsaurabh777.github.io/" />
+    <meta property="og:image" content="https://nsaurabh777.github.io/assets/images/hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saurabh Nair | Full Stack Data Scientist &amp; AI Architect" />
+    <meta name="twitter:description"
+        content="Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS, Azure, and next-gen LLM stacks." />
+    <meta name="twitter:image" content="https://nsaurabh777.github.io/assets/images/hero.webp" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet" />
-    <style>
-        :root {
-            color-scheme: light dark;
-            --bg: #030712;
-            --bg-alt: #0b1120;
-            --card: rgba(15, 23, 42, 0.75);
-            --glass: rgba(255, 255, 255, 0.08);
-            --accent: #38bdf8;
-            --accent-2: #f472b6;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-            --border: rgba(148, 163, 184, 0.2);
-            --shadow: 0 25px 50px rgba(15, 23, 42, 0.55);
-            background-color: var(--bg);
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saurabh Nair",
+        "jobTitle": "Full Stack Data Scientist & AI Architect",
+        "url": "https://nsaurabh777.github.io/",
+        "email": "mailto:nsaurabh777@gmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/nsaurabh777",
+            "https://github.com/nsaurabh777"
+        ],
+        "knowsLanguage": ["English", "Hindi", "Marathi", "Gujarati", "Malayalam", "French", "Spanish"],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "NMIMS University"
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 45%),
-                radial-gradient(circle at 20% 20%, rgba(244, 114, 182, 0.25), transparent 40%),
-                var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 24px 120px;
-        }
-
-        header.hero {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 60px 0 30px;
-            align-items: center;
-        }
-
-        .hero-content {
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 32px;
-            background: linear-gradient(160deg, rgba(56, 189, 248, 0.08), rgba(15, 23, 42, 0.6));
-            box-shadow: var(--shadow);
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 16px;
-            background: rgba(56, 189, 248, 0.1);
-        }
-
-        h1 {
-            font-family: 'Space Grotesk', 'Inter', sans-serif;
-            font-size: clamp(2.4rem, 6vw, 3.8rem);
-            line-height: 1.1;
-            margin: 0 0 12px;
-        }
-
-        .subtitle {
-            color: var(--muted);
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin: 24px 0 32px;
-        }
-
-        .contact-card {
-            padding: 14px 16px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            background: rgba(148, 163, 184, 0.07);
-        }
-
-        .contact-card span {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .contact-card a {
-            font-weight: 600;
-            color: var(--text);
-            text-decoration: none;
-        }
-
-        .hero-visual {
-            position: relative;
-            min-height: 360px;
-        }
-
-        .hero-visual img {
-            width: 100%;
-            border-radius: 32px;
-            object-fit: cover;
-            height: 100%;
-            filter: saturate(1.1);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .floating-card {
-            position: absolute;
-            bottom: -25px;
-            right: 10%;
-            background: var(--card);
-            padding: 18px 22px;
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            max-width: 240px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-card strong {
-            font-size: 1.3rem;
-            color: var(--accent);
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-        }
-
-        .stat-card {
-            border-radius: 18px;
-            padding: 16px 18px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-        }
-
-        .stat-card h3 {
-            margin: 8px 0 4px;
-            font-size: 1.4rem;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .tabs-wrapper {
-            margin-top: 70px;
-            border-radius: 30px;
-            border: 1px solid var(--border);
-            background: rgba(2, 6, 23, 0.85);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .tab-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            padding: 18px;
-            background: rgba(15, 23, 42, 0.65);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tab-list button {
-            flex: 1 0 150px;
-            padding: 12px 18px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            background: transparent;
-            color: var(--muted);
-            font-weight: 600;
-            font-family: 'Space Grotesk', sans-serif;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-
-        .tab-list button.active {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: #020617;
-            border-color: transparent;
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
-        }
-
-        .tab-panel {
-            display: none;
-            padding: 30px;
-        }
-
-        .tab-panel.active {
-            display: block;
-            animation: fade 0.4s ease;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .timeline {
-            display: grid;
-            gap: 24px;
-        }
-
-        .timeline-card {
-            border-radius: 18px;
-            border: 1px solid var(--border);
-            padding: 20px;
-            background: rgba(15, 23, 42, 0.75);
-        }
-
-        .timeline-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        .timeline-card .meta {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .chip-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 18px 0;
-        }
-
-        .chip {
-            padding: 8px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            background: rgba(148, 163, 184, 0.08);
-            font-size: 0.9rem;
-        }
-
-        ul.highlight-list {
-            margin: 0;
-            padding-left: 20px;
-            color: var(--muted);
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 640px) {
-            .tab-list {
-                flex-direction: column;
-            }
-
-            .tab-panel {
-                padding: 22px;
-            }
-
-            .hero-content {
-                padding: 24px;
-            }
-        }
-    </style>
+    }
+    </script>
 </head>
 
 <body>
-    <main>
-        <header class="hero">
-            <section class="hero-content">
-                <div class="hero-badge">Full Stack Data Scientist · AI Architect</div>
-                <h1>Saurabh Nair</h1>
-                <p class="subtitle">
-                    Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS, Azure, and
-                    next-gen LLM stacks. Tenacious about measurable business lift, governance, and delightful stakeholder experiences.
-                </p>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <span>Phone</span>
-                        <a href="tel:+917977144438">+91 7977144438</a>
-                    </div>
-                        <div class="contact-card">
-                        <span>Email</span>
-                        <a href="mailto:nsaurabh777@gmail.com">nsaurabh777@gmail.com</a>
-                    </div>
-                    <div class="contact-card">
-                        <span>LinkedIn</span>
-                        <a href="https://linkedin.com/in/nsaurabh777" target="_blank" rel="noopener">linkedin.com/in/nsaurabh777</a>
-                    </div>
-                    <div class="contact-card">
-                        <span>GitHub</span>
-                        <a href="https://github.com/nsaurabh777" target="_blank" rel="noopener">github.com/nsaurabh777</a>
-                    </div>
-                </div>
-                <div class="stat-grid">
-                    <div class="stat-card">
-                        <span class="muted">Experience</span>
-                        <h3>8+ yrs</h3>
-                        <p>Enterprise AI & data science leadership</p>
-                    </div>
-                    <div class="stat-card">
-                        <span class="muted">Impact</span>
-                        <h3>93%+</h3>
-                        <p>Intent accuracy with LLM-on-Snowflake Cortex</p>
-                    </div>
-                    <div class="stat-card">
-                        <span class="muted">Speaking</span>
-                        <h3>DataHack '23</h3>
-                        <p>Predictive Maintenance with OCR & NLP</p>
-                    </div>
-                </div>
-            </section>
-            <section class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
-                    alt="Futuristic workspace representing AI craftsmanship" />
-                <div class="floating-card">
-                    <strong>Team of the Year 2024–25</strong>
-                    <p>Jet2 Travel Technologies · Multi-label intent platform powered by Mistral LLM & Snowflake Cortex.</p>
-                </div>
-            </section>
-        </header>
+    <div class="progress-bar" id="progressBar"></div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <section class="tabs-wrapper" aria-live="polite">
-            <div class="tab-list">
-                <button class="active" data-tab="experience">Experience</button>
-                <button data-tab="skills">Skills Matrix</button>
-                <button data-tab="projects">Projects & Impact</button>
-                <button data-tab="education">Education & Credentials</button>
+    <header class="nav" id="siteNav">
+        <div class="nav-inner">
+            <a class="nav-logo" href="#top"><span>Saurabh Nair</span><span class="nav-logo-dot"
+                    aria-hidden="true"></span></a>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#about" data-nav>About</a>
+                <a href="#experience" data-nav>Experience</a>
+                <a href="#skills" data-nav>Skills</a>
+                <a href="#projects" data-nav>Projects</a>
+                <a href="#impact" data-nav>Impact</a>
+                <a href="#education" data-nav>Education</a>
+                <a href="#contact" data-nav>Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="data/resume.pdf" target="_blank" rel="noopener">Résumé</a>
+                <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false"
+                    aria-controls="mobileMenu" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#impact">Impact</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="data/resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        </div>
+    </header>
 
-            <article class="tab-panel active" id="experience" role="tabpanel">
-                <div class="timeline">
-                    <div class="timeline-card">
-                        <h3>Senior Machine Learning Engineer · Jet2 Travel Technologies</h3>
-                        <p class="meta">Aug 2022 – Present · Pune (Remote)</p>
-                        <ul class="highlight-list">
-                            <li>Spearheaded a multi-class, multi-label intent model on Snowflake Cortex + Mistral in 60 days, hitting 93% accuracy and winning Team of the Year 2024–25.</li>
-                            <li>Built an LLM-as-a-Judge governance loop to arbitrate edge-case intents, removing ambiguity across semantically similar classes.</li>
-                            <li>Architected a unified Snowflake DS fabric integrating AWS SageMaker, Dataiku, Hex, Tableau, and Snowsight for seamless collaboration.</li>
-                            <li>Led strategic migrations from Dataiku DSS to SageMaker, uplifting scalability, CI/CD, and cost efficiency.</li>
-                            <li>Automated retraining triggers in Dataiku for drift-aware redeployments and instrumented real-time Tableau ops monitoring.</li>
-                            <li>Integrated Azure Artifact Registry + Snyk to harden Python supply chain security across Hex, DSS, and SageMaker.</li>
-                        </ul>
+    <main id="main-content">
+        <section class="hero" id="top">
+            <canvas id="networkCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-inner">
+                <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span> Full Stack Data Scientist ·
+                    AI/ML Architect</p>
+                <h1 class="hero-title reveal">Saurabh Nair</h1>
+                <p class="hero-subtitle reveal">
+                    Production-grade AI across Snowflake, AWS, GCP, and Dataiku — governed, measured, and shipped
+                    by an award-winning ML leader who treats stakeholder experience as a deliverable, not an
+                    afterthought.
+                </p>
+                <div class="hero-actions reveal">
+                    <a class="btn btn-primary" href="#projects">View my work</a>
+                    <a class="btn btn-outline" href="data/resume.pdf" target="_blank" rel="noopener">Download
+                        résumé</a>
+                    <a class="btn btn-outline" href="#contact">Get in touch</a>
+                </div>
+                <dl class="hero-stats reveal">
+                    <div class="stat">
+                        <dt data-counter="8" data-suffix="+">0</dt>
+                        <dd>Years in production ML &amp; data science</dd>
+                    </div>
+                    <div class="stat">
+                        <dt data-counter="93" data-suffix="%">0</dt>
+                        <dd>Intent accuracy · LLM on Snowflake Cortex</dd>
+                    </div>
+                    <div class="stat">
+                        <dt data-counter="6" data-suffix="+">0</dt>
+                        <dd>Production ML &amp; GenAI systems shipped</dd>
+                    </div>
+                    <div class="stat">
+                        <dt class="stat-text">DataHack Summit Speaker</dt>
+                        <dd>Analytics Vidhya · 2023</dd>
+                    </div>
+                </dl>
+            </div>
+            <a class="scroll-cue" href="#about" aria-label="Scroll to content"><span></span></a>
+        </section>
+
+        <section class="section" id="about">
+            <div class="section-inner">
+                <p class="section-kicker reveal">About</p>
+                <h2 class="section-title reveal">Turning raw data into decisions people trust.</h2>
+                <div class="about-grid">
+                    <p class="about-text reveal">
+                        Messy data in. Architected AI services out. That's been the job for 8+ years —
+                        production systems people trust with real decisions, across classical ML and generative AI,
+                        at enterprise scale. I've shipped everything from
+                        <strong>ARIMA/LSTM forecasting and CatBoost fraud &amp; propensity models</strong> to
+                        <strong>LLM-powered classification and recommendation systems</strong> running in production
+                        at enterprise scale — the classical toolkit and the generative one, each used wherever it
+                        fits best. I care equally about model accuracy and the MLOps discipline — CI/CD, drift
+                        monitoring, governance — that keeps it reliable long after launch. Currently a Senior
+                        Machine Learning Engineer at
+                        <strong>Jet2 Travel Technologies</strong>, where I lead Generative AI initiatives on Snowflake
+                        Cortex and design cloud-native ML serving architecture on AWS.
+                    </p>
+                    <ul class="quick-facts reveal">
+                        <li>
+                            <strong>Based in</strong>
+                            <span>Mumbai · working remote from Pune</span>
+                        </li>
+                        <li>
+                            <strong>Focus areas</strong>
+                            <span>Generative AI &amp; LLMs, MLOps, Recommendation Systems</span>
+                        </li>
+                        <li>
+                            <strong>Speaks</strong>
+                            <span>English, Hindi, Marathi, Gujarati, Malayalam, French, Spanish</span>
+                        </li>
+                        <li>
+                            <strong>Off the clock</strong>
+                            <span>National-level hockey player · Taekwondo black belt</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="experience">
+            <div class="section-inner">
+                <p class="section-kicker reveal">Career</p>
+                <h2 class="section-title reveal">Experience</h2>
+                <div class="timeline" data-reveal-group>
+                    <div class="timeline-item">
+                        <div class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <h3>Senior Machine Learning Engineer · <span
+                                        class="company">Jet2 Travel Technologies</span></h3>
+                                <span class="meta">Apr 2024 – Present · Pune (Remote)</span>
+                            </div>
+                            <ul class="highlight-list">
+                                <li>Spearheaded a multi-class, multi-label intent classification model using
+                                    <strong>Mistral Generative AI on Snowflake Cortex</strong>, hitting 93% accuracy
+                                    within 2 months and winning <strong>Team of the Year 2024–25</strong>.</li>
+                                <li>Pioneered an <strong>LLM-as-a-Judge</strong> framework to arbitrate edge-case
+                                    misclassifications between semantically similar intent classes, lifting decision
+                                    confidence.</li>
+                                <li>Architected a cloud-native <strong>recommendation engine for Properties</strong>:
+                                    API Gateway → Lambda → SageMaker Endpoints for real-time inference, ALB → ECS
+                                    Fargate and EKS for orchestration, Redis for low-latency caching, SageMaker
+                                    Feature Stores, OpenSearch for retrieval, and a <strong>Two-Tower recommendation
+                                        model</strong> at the core.</li>
+                                <li>Recognized with Employee of the Quarter (Jul–Sep 2024) and nominated for Employee
+                                    of the Year for the Intent Classification project.</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Data Scientist · Paytm</h3>
-                        <p class="meta">Feb 2022 – Aug 2022 · Mumbai</p>
-                        <ul class="highlight-list">
-                            <li>Raised conversion lift by 40% by deploying CatBoost propensity models tailoring channels & cadences.</li>
-                            <li>Operationalized regression-based notification frequency optimizers and behavioral segmenters for precision marketing.</li>
-                            <li>Unified omnichannel KPIs into interactive strategy dashboards, slashing decision latency by 45%.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <div class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <h3>Machine Learning Engineer · <span class="company">Jet2 Travel
+                                        Technologies</span></h3>
+                                <span class="meta">Aug 2022 – Mar 2024 · Pune (Remote)</span>
+                            </div>
+                            <ul class="highlight-list">
+                                <li>Architected a unified <strong>Snowflake data science fabric</strong> integrating
+                                    AWS SageMaker, Dataiku DSS, Hex, Tableau, and Snowsight for seamless team
+                                    collaboration.</li>
+                                <li>Led the strategic migration of core ML projects from Dataiku DSS to AWS
+                                    SageMaker, uplifting scalability, version control, and cost efficiency.</li>
+                                <li>Designed an <strong>MLOps governance framework</strong> in Dataiku DSS, automating
+                                    model lifecycle management, approvals, and deployment workflows.</li>
+                                <li>Integrated Azure Artifact Registry with Snyk Enterprise across Dataiku, Hex, and
+                                    SageMaker, hardening Python/PyPI supply-chain security in production.</li>
+                                <li>Automated drift-aware retraining triggers and built a real-time Tableau ops
+                                    monitoring dashboard for production pipelines. Received Employee of the Quarter
+                                    (Jan–Mar 2023).</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Data Scientist / Assistant Manager · Servify</h3>
-                        <p class="meta">Apr 2019 – Feb 2022 · Mumbai</p>
-                        <ul class="highlight-list">
-                            <li>Delivered ARIMA / SARIMA / LSTM ensembles for mission-critical forecasts.</li>
-                            <li>Achieved 73% recall on fraud detection pipelines and pushed CNN & FastAI segmentation models into production.</li>
-                            <li>Designed imputation accelerators via LightGBM & XGBoost to stabilize downstream models.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <div class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <h3>Data Scientist – Team Lead · <span class="company">Paytm</span></h3>
+                                <span class="meta">Feb 2022 – Aug 2022 · Mumbai</span>
+                            </div>
+                            <ul class="highlight-list">
+                                <li>Raised conversion rates by ~40% with a <strong>CatBoost propensity model</strong>
+                                    predicting payment likelihood and optimal communication channel.</li>
+                                <li>Designed a regression-based optimizer for notification cadence and a behavioral
+                                    segmentation algorithm for precision targeting.</li>
+                                <li>Unified omnichannel KPIs into interactive strategy dashboards, cutting decision
+                                    latency by 45%. Received the <strong>Rising Star</strong> award.</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Data Analyst · Servify</h3>
-                        <p class="meta">Jun 2017 – Apr 2019 · Mumbai</p>
-                        <ul class="highlight-list">
-                            <li>Built a Django REST + RabbitMQ reporting fabric delivering real-time analytics.</li>
-                            <li>Partnered with supply chain to stand up IMS analytics and scrapers for 10k+ smartphone SKUs.</li>
-                            <li>Optimized SQL workloads to cut extraction latency by 60%.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <div class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <h3>Data Scientist – Assistant Manager · <span class="company">Servify</span></h3>
+                                <span class="meta">Apr 2019 – Feb 2022 · Mumbai</span>
+                            </div>
+                            <ul class="highlight-list">
+                                <li>Delivered <strong>ARIMA / SARIMA / LSTM</strong> ensembles for mission-critical
+                                    business forecasts.</li>
+                                <li>Built fraud detection pipelines achieving 73% recall, and pushed CNN &amp; FastAI
+                                    segmentation models into production for automated defect detection.</li>
+                                <li>Designed data imputation accelerators with LightGBM &amp; XGBoost to stabilize
+                                    downstream models.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-card reveal">
+                            <div class="timeline-head">
+                                <h3>Data Analyst · <span class="company">Servify</span></h3>
+                                <span class="meta">Jun 2017 – Apr 2019 · Mumbai</span>
+                            </div>
+                            <ul class="highlight-list">
+                                <li>Built a <strong>Django REST + RabbitMQ</strong> reporting fabric delivering
+                                    real-time analytics with zero manual intervention.</li>
+                                <li>Partnered with supply chain to stand up IMS analytics and scraped specs/pricing
+                                    for 10,000+ smartphone SKUs.</li>
+                                <li>Optimized SQL workloads, cutting data extraction latency by 60%.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <article class="tab-panel" id="skills" role="tabpanel">
-                <div class="grid-2">
-                    <div class="timeline-card">
-                        <h3>Programming & Frameworks</h3>
+        <section class="section" id="skills">
+            <div class="section-inner">
+                <p class="section-kicker reveal">Capabilities</p>
+                <h2 class="section-title reveal">Skills &amp; tools</h2>
+                <div class="grid-2" data-reveal-group>
+                    <div class="skill-card reveal">
+                        <h3>Programming &amp; Frameworks</h3>
                         <div class="chip-grid">
                             <span class="chip">Python</span>
                             <span class="chip">R</span>
@@ -443,43 +293,48 @@
                         <p class="meta">End-to-end APIs, automation, and infrastructure as code.</p>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Machine Learning & AI</h3>
+                    <div class="skill-card reveal">
+                        <h3>Machine Learning &amp; Generative AI</h3>
                         <div class="chip-grid">
-                            <span class="chip">LLMs & Generative AI</span>
-                            <span class="chip">Time Series</span>
+                            <span class="chip">CatBoost / XGBoost / LightGBM</span>
+                            <span class="chip">ARIMA / SARIMA / LSTM</span>
                             <span class="chip">Computer Vision</span>
                             <span class="chip">NLP</span>
+                            <span class="chip">Anthropic Claude</span>
+                            <span class="chip">LLMs &amp; Mistral</span>
                             <span class="chip">MLOps</span>
                             <span class="chip">Model Monitoring</span>
                         </div>
-                        <p class="meta">From experimentation to governed deployments and observability.</p>
+                        <p class="meta">Classical forecasting and CV to governed LLM deployments and observability.</p>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Data Engineering & Architecture</h3>
+                    <div class="skill-card reveal">
+                        <h3>Data Engineering &amp; Architecture</h3>
                         <div class="chip-grid">
                             <span class="chip">Snowflake</span>
-                            <span class="chip">Hadoop</span>
-                            <span class="chip">Spark</span>
+                            <span class="chip">AWS SageMaker</span>
+                            <span class="chip">Lambda / API Gateway</span>
+                            <span class="chip">ECS Fargate / EKS</span>
+                            <span class="chip">Redis</span>
+                            <span class="chip">OpenSearch</span>
                             <span class="chip">Kafka</span>
+                            <span class="chip">Spark</span>
+                            <span class="chip">Hadoop</span>
                             <span class="chip">Hive</span>
                             <span class="chip">Druid</span>
-                            <span class="chip">AWS SageMaker</span>
                             <span class="chip">Azure</span>
                         </div>
                         <p class="meta">Hybrid-cloud architectures with automated model deployment workflows.</p>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Analytics, Visualization & Databases</h3>
+                    <div class="skill-card reveal">
+                        <h3>Analytics, Visualization &amp; Databases</h3>
                         <div class="chip-grid">
                             <span class="chip">Tableau</span>
                             <span class="chip">Streamlit</span>
                             <span class="chip">Superset</span>
                             <span class="chip">Hex</span>
                             <span class="chip">Pandas / PySpark</span>
-                            <span class="chip">Snowflake</span>
                             <span class="chip">MySQL</span>
                             <span class="chip">PostgreSQL</span>
                             <span class="chip">MongoDB</span>
@@ -487,94 +342,389 @@
                         <p class="meta">Executive-ready storytelling anchored in governed, queryable data.</p>
                     </div>
 
-                    <div class="timeline-card">
-                        <h3>Tooling & Governance</h3>
+                    <div class="skill-card reveal">
+                        <h3>Tooling &amp; Governance</h3>
                         <div class="chip-grid">
-                            <span class="chip">Git & CI/CD</span>
+                            <span class="chip">Git &amp; CI/CD</span>
                             <span class="chip">RabbitMQ</span>
                             <span class="chip">Snyk</span>
                             <span class="chip">Azure Artifact Registry</span>
+                            <span class="chip">n8n Automation</span>
                             <span class="chip">Feature Engineering</span>
                             <span class="chip">Data Governance</span>
-                            <span class="chip">Experimentation</span>
                         </div>
-                        <p class="meta">Security-forward pipelines that scale safely.</p>
+                        <p class="meta">Security-forward pipelines and automation that scale safely.</p>
                     </div>
-                </div>
-            </article>
 
-            <article class="tab-panel" id="projects" role="tabpanel">
-                <div class="timeline">
-                    <div class="timeline-card">
-                        <h3>Projects & Challenges</h3>
-                        <ul class="highlight-list">
-                            <li>Analytics Vidhya Job-a-thon: secured 6th position through rapid feature engineering and gradient boosting mastery.</li>
-                            <li>Lead Conversion Intelligence: built classification stacks to pinpoint high-potential insurance and credit leads.</li>
-                            <li>Forecast Suites: architected regression + time-series hybrids for house pricing and supplement sales forecasts.</li>
-                            <li>Speech-to-Text Engine: delivered a DeepSpeech pipeline, showcasing audio NLP excellence.</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>Achievements & Highlights</h3>
-                        <ul class="highlight-list">
-                            <li>Speaker, DataHack Summit 2023 — “End-to-End ML Pipeline for Predictive Maintenance using OCR & NLP.”</li>
-                            <li>Multiple Employee of the Quarter awards (Jet2 Travel Technologies) & Employee of the Year nomination.</li>
-                            <li>Rising Star Award at Paytm for innovation and impact.</li>
-                            <li>National-level Hockey Player & Taekwondo Black Belt showcasing leadership and resilience.</li>
-                            <li>Personal recommendation letter from CEO, Patronus Creative.</li>
-                        </ul>
+                    <div class="skill-card reveal">
+                        <h3>Languages</h3>
+                        <div class="chip-grid">
+                            <span class="chip">English</span>
+                            <span class="chip">Hindi</span>
+                            <span class="chip">Marathi</span>
+                            <span class="chip">Gujarati</span>
+                            <span class="chip">Malayalam</span>
+                            <span class="chip">French</span>
+                            <span class="chip">Spanish</span>
+                        </div>
+                        <p class="meta">Fluent cross-cultural collaboration, spanning 7 languages.</p>
                     </div>
                 </div>
-            </article>
-
-            <article class="tab-panel" id="education" role="tabpanel">
-                <div class="timeline">
-                    <div class="timeline-card">
-                        <h3>MBA Tech IT · NMIMS University</h3>
-                        <p class="meta">Mukesh Patel School Of Technology Management & Engineering · Mumbai · 2012 – 2017
-                            <br />Major: Business Intelligence & Analytics · CGPA 3.21/4
-                        </p>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>Higher Secondary Certificate</h3>
-                        <p class="meta">Mithibai College · Mumbai · 2011 – 2012 · 74.67%</p>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>Secondary School Certificate</h3>
-                        <p class="meta">St. Francis D’Assisi High School · Mumbai · 2009 – 2010 · 84.36%</p>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>Certifications</h3>
-                        <ul class="highlight-list">
-                            <li>Machine Learning – Analytics Vidhya (Oct 2021)</li>
-                            <li>Natural Language Processing – Analytics Vidhya (Oct 2021)</li>
-                            <li>Ethical Hacking (May 2015)</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>Snowflake Cortex · Mistral · Anthropic Claude · AWS SageMaker · Dataiku DSS · Tableau ·
+                        Docker · Terraform · Kafka · Spark · n8n · Redis · OpenSearch</span>
+                    <span>Snowflake Cortex · Mistral · Anthropic Claude · AWS SageMaker · Dataiku DSS · Tableau ·
+                        Docker · Terraform · Kafka · Spark · n8n · Redis · OpenSearch</span>
                 </div>
-            </article>
+            </div>
         </section>
 
-        <footer>
-            © <span id="year"></span> Saurabh Nair · Built with curiosity, empathy, and resilient ML pipelines.
-        </footer>
+        <section class="section alt" id="projects">
+            <div class="section-inner">
+                <p class="section-kicker reveal">Selected work</p>
+                <h2 class="section-title reveal">Projects</h2>
+                <div class="project-grid" data-reveal-group>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">01</p>
+                                <h3>Multi-Label Intent Classification</h3>
+                                <p>Mistral Generative AI on Snowflake Cortex with an LLM-as-a-Judge arbitration
+                                    layer — 93% accuracy in 60 days.</p>
+                                <div class="tag-row"><span>Snowflake Cortex</span><span>Mistral</span><span>LLM-as-a-Judge</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> Prompted &amp; tuned Mistral on Snowflake Cortex; built an LLM-as-a-Judge layer to arbitrate near-identical intent classes.</li>
+                                    <li><strong>Impact:</strong> 93% accuracy in 60 days, adopted as the production intent router; won Team of the Year 2024–25.</li>
+                                    <li><strong>Stack:</strong> Snowflake Cortex, Mistral, Python, SQL.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">02</p>
+                                <h3>Recommendation Engine — Properties</h3>
+                                <p>Two-Tower recommendation model served through API Gateway, Lambda &amp; SageMaker
+                                    Endpoints, with ECS Fargate/EKS orchestration, Redis caching and OpenSearch
+                                    retrieval.</p>
+                                <div class="tag-row"><span>Two-Tower Model</span><span>SageMaker</span><span>EKS</span><span>Redis</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> Two-Tower model trained on property &amp; behavioral features; served real-time via SageMaker Endpoints behind API Gateway/Lambda.</li>
+                                    <li><strong>Impact:</strong> Low-latency retrieval at scale using Redis caching + OpenSearch, orchestrated across ECS Fargate and EKS.</li>
+                                    <li><strong>Stack:</strong> SageMaker, Redis, OpenSearch, EKS, Feature Store.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">03</p>
+                                <h3>Conversion &amp; Channel Optimization</h3>
+                                <p>CatBoost propensity models and cadence optimizers, lifting conversion
+                                    ~40% while cutting spend on ineffective channels.</p>
+                                <div class="tag-row"><span>CatBoost</span><span>Segmentation</span><span>Dashboards</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> CatBoost propensity scoring, a regression-based cadence optimizer, and behavioral segmentation for precision targeting.</li>
+                                    <li><strong>Impact:</strong> ~40% lift in conversion; unified omnichannel KPI dashboards cut decision latency by 45%.</li>
+                                    <li><strong>Stack:</strong> CatBoost, Python, dashboarding.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">04</p>
+                                <h3>Forecasting &amp; Fraud Detection</h3>
+                                <p>ARIMA/SARIMA/LSTM ensembles for business forecasting, plus ensemble fraud models
+                                    reaching 73% recall.</p>
+                                <div class="tag-row"><span>ARIMA</span><span>LSTM</span><span>Anomaly Detection</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> ARIMA/SARIMA/LSTM ensembles for demand forecasting; gradient-boosted ensembles for fraud scoring.</li>
+                                    <li><strong>Impact:</strong> 73% fraud recall; forecasts underpinned mission-critical business planning.</li>
+                                    <li><strong>Stack:</strong> ARIMA, SARIMA, LSTM, LightGBM, XGBoost.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">05</p>
+                                <h3>Computer Vision Pipelines</h3>
+                                <p>CNN classification and FastAI semantic segmentation models for automated crack
+                                    &amp; defect detection.</p>
+                                <div class="tag-row"><span>TensorFlow</span><span>FastAI</span><span>CNN</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> CNN classifiers and FastAI segmentation models trained on inspection imagery.</li>
+                                    <li><strong>Impact:</strong> Replaced manual visual inspection with automated, production-grade detection pipelines.</li>
+                                    <li><strong>Stack:</strong> TensorFlow, FastAI, CNN, OpenCV.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">06</p>
+                                <h3>Async Reporting Engine</h3>
+                                <p>Django + RabbitMQ reporting endpoint that decoupled slow report
+                                    generation from the frontend via async job queuing.</p>
+                                <div class="tag-row"><span>Django</span><span>RabbitMQ</span><span>AWS S3</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> Django endpoint validated requests and persisted status/response in MySQL, then queued generation via RabbitMQ instead of blocking synchronously, returning a UUID for the frontend to poll.</li>
+                                    <li><strong>Impact:</strong> Eliminated 4-5+ second synchronous waits on the frontend; completed reports were written to a private S3 bucket and served back via presigned URLs.</li>
+                                    <li><strong>Stack:</strong> Django, MySQL, RabbitMQ, AWS S3.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="impact">
+            <div class="section-inner">
+                <p class="section-kicker reveal">Recognition</p>
+                <h2 class="section-title reveal">Impact &amp; recognition</h2>
+                <ul class="impact-ledger" data-reveal-group>
+                    <li class="impact-row reveal">
+                        <span class="impact-index">01</span>
+                        <span class="impact-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
+                                <path d="M9 14.5 7 22l5-3 5 3-2-7.5" />
+                            </svg>
+                        </span>
+                        <div class="impact-body">
+                            <h3>Speaker, DataHack Summit 2023</h3>
+                            <p>"End-to-End ML Pipeline for Predictive Maintenance using OCR &amp; NLP" — Analytics
+                                Vidhya.</p>
+                        </div>
+                    </li>
+                    <li class="impact-row reveal">
+                        <span class="impact-index">02</span>
+                        <span class="impact-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
+                                <path d="M9 14.5 7 22l5-3 5 3-2-7.5" />
+                            </svg>
+                        </span>
+                        <div class="impact-body">
+                            <h3>Employee of the Quarter ×2</h3>
+                            <p>Jet2 Travel Technologies — Jan–Mar 2023 &amp; Jul–Sep 2024, plus an Employee of the
+                                Year nomination.</p>
+                        </div>
+                    </li>
+                    <li class="impact-row reveal">
+                        <span class="impact-index">03</span>
+                        <span class="impact-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 3h12l-1 8a5 5 0 0 1-10 0L6 3Z" />
+                                <path d="M9 21h6M12 16v5" />
+                            </svg>
+                        </span>
+                        <div class="impact-body">
+                            <h3>Rising Star Award — Paytm</h3>
+                            <p>Recognized for innovation and high-impact delivery on channel optimization work.</p>
+                        </div>
+                    </li>
+                    <li class="impact-row reveal">
+                        <span class="impact-index">04</span>
+                        <span class="impact-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </span>
+                        <div class="impact-body">
+                            <h3>6th Place, Job-a-thon</h3>
+                            <p>Analytics Vidhya national challenge — rapid feature engineering &amp; gradient
+                                boosting under time pressure.</p>
+                        </div>
+                    </li>
+                    <li class="impact-row reveal">
+                        <span class="impact-index">05</span>
+                        <span class="impact-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5Z" />
+                            </svg>
+                        </span>
+                        <div class="impact-body">
+                            <h3>National Hockey Player &amp; Taekwondo Black Belt</h3>
+                            <p>Discipline, teamwork, and leadership carried from the field into engineering.</p>
+                        </div>
+                    </li>
+                    <li class="impact-row reveal">
+                        <span class="impact-index">06</span>
+                        <span class="impact-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16v12H8l-4 4V4Z" />
+                            </svg>
+                        </span>
+                        <div class="impact-body">
+                            <h3>CEO Recommendation Letter</h3>
+                            <p>Personal recommendation from the CEO of Patronus Creative for exemplary performance.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section alt" id="education">
+            <div class="section-inner">
+                <p class="section-kicker reveal">Foundation</p>
+                <h2 class="section-title reveal">Education &amp; credentials</h2>
+                <div class="edu-stack" data-reveal-group>
+                    <div class="edu-primary reveal">
+                        <details class="edu-primary-details">
+                            <summary class="edu-primary-head">
+                                <h3>MBA Tech (IT)</h3>
+                                <p class="edu-university">NMIMS University <span aria-hidden="true">·</span> Mukesh
+                                    Patel School of Technology Management &amp; Engineering <span class="edu-grade-chevron" aria-hidden="true">›</span></p>
+                                <p class="meta">Mumbai · 2012 – 2017</p>
+                            </summary>
+                            <span class="edu-grade-value">CGPA 3.21 / 4</span>
+                        </details>
+                        <div class="edu-course-tags">
+                            <span class="chip">Business Intelligence</span>
+                            <span class="chip">Analytics</span>
+                            <span class="chip">IT Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-prior reveal">
+                        <span class="edu-block-label">Earlier education</span>
+                        <ul class="edu-prior-list">
+                            <li>
+                                <details class="edu-prior-item">
+                                    <summary>
+                                        <span>Higher Secondary Certificate · Mithibai College · Mumbai · 2011 – 2012</span>
+                                        <span class="edu-grade-chevron" aria-hidden="true">›</span>
+                                    </summary>
+                                    <span class="edu-grade-value">74.67%</span>
+                                </details>
+                            </li>
+                            <li>
+                                <details class="edu-prior-item">
+                                    <summary>
+                                        <span>Secondary School Certificate · St. Francis D'Assisi High School ·
+                                            Mumbai · 2009 – 2010</span>
+                                        <span class="edu-grade-chevron" aria-hidden="true">›</span>
+                                    </summary>
+                                    <span class="edu-grade-value">84.36%</span>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="edu-certs reveal">
+                        <span class="edu-block-label">Certifications &amp; courses</span>
+                        <div class="chip-grid">
+                            <span class="chip">Build Product 10x Faster with GenAI — Analytics Vidhya (Jul 2025)</span>
+                            <span class="chip">Reimagining GenAI: Common Mistakes &amp; Best Practices</span>
+                            <span class="chip">Ethics in the Age of Generative AI</span>
+                            <span class="chip">n8n: A Complete Guide to the Automation Tool</span>
+                            <span class="chip">What Is Generative AI?</span>
+                            <span class="chip">Machine Learning — Analytics Vidhya (Oct 2021)</span>
+                            <span class="chip">Natural Language Processing — Analytics Vidhya (Oct 2021)</span>
+                            <span class="chip">Ethical Hacking (May 2015)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section" id="contact">
+            <div class="section-inner">
+                <p class="section-kicker reveal">Let's talk</p>
+                <h2 class="section-title reveal">Have a problem worth solving with data?</h2>
+                <p class="cta-subtitle reveal">Open to conversations on GenAI architecture, MLOps, and
+                    recommendation systems — or just a good chat about model governance.</p>
+                <div class="contact-grid reveal">
+                    <a class="contact-card" href="mailto:nsaurabh777@gmail.com" data-copy="nsaurabh777@gmail.com">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m4 7 8 6 8-6" />
+                            </svg>
+                        </span>
+                        <span class="label">Email</span>
+                        <strong>nsaurabh777@gmail.com</strong>
+                        <span class="copy-toast">Copied!</span>
+                    </a>
+                    <a class="contact-card" href="https://linkedin.com/in/nsaurabh777" target="_blank"
+                        rel="noopener">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <rect x="3" y="3" width="18" height="18" rx="3" />
+                                <path d="M7.5 10.5v6M7.5 7.5v.01M11.5 16.5v-3.6c0-1.2.9-2.1 2-2.1s2 .9 2 2.1v3.6" />
+                            </svg>
+                        </span>
+                        <span class="label">LinkedIn</span>
+                        <strong>linkedin.com/in/nsaurabh777</strong>
+                    </a>
+                    <a class="contact-card" href="https://github.com/nsaurabh777" target="_blank" rel="noopener">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path
+                                    d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+                            </svg>
+                        </span>
+                        <span class="label">GitHub</span>
+                        <strong>github.com/nsaurabh777</strong>
+                    </a>
+                </div>
+                <a class="btn btn-primary reveal" href="mailto:nsaurabh777@gmail.com">Say hello</a>
+            </div>
+        </section>
     </main>
 
-    <script>
-        const tabButtons = document.querySelectorAll('.tab-list button');
-        const panels = document.querySelectorAll('.tab-panel');
+    <footer>
+        © <span id="year"></span> Saurabh Nair · Built with curiosity, empathy, and resilient ML pipelines.
+    </footer>
 
-        tabButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                const target = button.dataset.tab;
-
-                tabButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
-                panels.forEach((panel) => panel.classList.toggle('active', panel.id === target));
-            });
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
