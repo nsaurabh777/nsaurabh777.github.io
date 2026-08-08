@@ -38,7 +38,6 @@
         "jobTitle": "Full Stack Data Scientist & AI Architect",
         "url": "https://nsaurabh777.github.io/",
         "email": "mailto:nsaurabh777@gmail.com",
-        "telephone": "+91-7977123456",
         "sameAs": [
             "https://linkedin.com/in/nsaurabh777",
             "https://github.com/nsaurabh777"
@@ -95,9 +94,9 @@
                     AI/ML Architect</p>
                 <h1 class="hero-title reveal">Saurabh Nair</h1>
                 <p class="hero-subtitle reveal">
-                    Award-winning ML leader blending MLOps rigor with production-grade AI across Snowflake, AWS,
-                    Azure, and next-gen LLM stacks. Tenacious about measurable business lift, governance, and
-                    delightful stakeholder experiences.
+                    Full-stack ML leader who ships classical forecasting, fraud, and recommendation systems as
+                    readily as production LLM pipelines — blending MLOps rigor with measurable business lift across
+                    Snowflake, AWS, and Azure.
                 </p>
                 <div class="hero-actions reveal">
                     <a class="btn btn-primary" href="#projects">View my work</a>
@@ -115,12 +114,12 @@
                         <dd>Intent accuracy · LLM on Snowflake Cortex</dd>
                     </div>
                     <div class="stat">
-                        <dt data-counter="7">0</dt>
-                        <dd>Languages spoken fluently</dd>
+                        <dt data-counter="6" data-suffix="+">0</dt>
+                        <dd>Production ML &amp; GenAI systems shipped</dd>
                     </div>
                     <div class="stat">
-                        <dt class="stat-text">Team of the Year</dt>
-                        <dd>Jet2 Travel Technologies · 2024–25</dd>
+                        <dt class="stat-text">DataHack Summit Speaker</dt>
+                        <dd>Analytics Vidhya · 2023</dd>
                     </div>
                 </dl>
             </div>
@@ -134,11 +133,13 @@
                 <div class="about-grid">
                     <p class="about-text reveal">
                         I'm a Data Scientist by profession with a flair for pulling insight out of raw, messy data —
-                        and turning it into systems that ship. Over 8+ years I've moved from building analytics
-                        pipelines and forecasting models to architecting <strong>LLM-powered classification and
-                            recommendation systems</strong> running in production at enterprise scale. I care equally
-                        about model accuracy and the MLOps discipline — CI/CD, drift monitoring, governance — that
-                        keeps it reliable long after launch. Currently a Senior Machine Learning Engineer at
+                        and turning it into systems that ship. Over 8+ years I've shipped everything from
+                        <strong>ARIMA/LSTM forecasting and CatBoost fraud &amp; propensity models</strong> to
+                        <strong>LLM-powered classification and recommendation systems</strong> running in production
+                        at enterprise scale — the classical toolkit and the generative one, each used wherever it
+                        fits best. I care equally about model accuracy and the MLOps discipline — CI/CD, drift
+                        monitoring, governance — that keeps it reliable long after launch. Currently a Senior
+                        Machine Learning Engineer at
                         <strong>Jet2 Travel Technologies</strong>, where I lead Generative AI initiatives on Snowflake
                         Cortex and design cloud-native ML serving architecture on AWS.
                     </p>
@@ -290,17 +291,18 @@
                     </div>
 
                     <div class="skill-card reveal">
-                        <h3>Generative AI &amp; ML</h3>
+                        <h3>Machine Learning &amp; Generative AI</h3>
                         <div class="chip-grid">
-                            <span class="chip accent">Anthropic Claude</span>
-                            <span class="chip accent">LLMs &amp; Mistral</span>
-                            <span class="chip">Time Series</span>
+                            <span class="chip">CatBoost / XGBoost / LightGBM</span>
+                            <span class="chip">ARIMA / SARIMA / LSTM</span>
                             <span class="chip">Computer Vision</span>
                             <span class="chip">NLP</span>
+                            <span class="chip">Anthropic Claude</span>
+                            <span class="chip">LLMs &amp; Mistral</span>
                             <span class="chip">MLOps</span>
                             <span class="chip">Model Monitoring</span>
                         </div>
-                        <p class="meta">From experimentation to governed deployments and observability.</p>
+                        <p class="meta">Classical forecasting and CV to governed LLM deployments and observability.</p>
                     </div>
 
                     <div class="skill-card reveal">
@@ -344,7 +346,7 @@
                             <span class="chip">RabbitMQ</span>
                             <span class="chip">Snyk</span>
                             <span class="chip">Azure Artifact Registry</span>
-                            <span class="chip accent">n8n Automation</span>
+                            <span class="chip">n8n Automation</span>
                             <span class="chip">Feature Engineering</span>
                             <span class="chip">Data Governance</span>
                         </div>
@@ -381,47 +383,132 @@
                 <p class="section-kicker reveal">Selected work</p>
                 <h2 class="section-title reveal">Projects &amp; impact</h2>
                 <div class="project-grid" data-reveal-group>
-                    <div class="project-card reveal">
-                        <p class="project-index">01</p>
-                        <h3>Multi-Label Intent Classification</h3>
-                        <p>Mistral Generative AI on Snowflake Cortex with an LLM-as-a-Judge arbitration layer — 93%
-                            accuracy in 60 days, Team of the Year 2024–25.</p>
-                        <div class="tag-row"><span>Snowflake Cortex</span><span>Mistral</span><span>LLM-as-a-Judge</span></div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">01</p>
+                                <h3>Multi-Label Intent Classification</h3>
+                                <p>Mistral Generative AI on Snowflake Cortex with an LLM-as-a-Judge arbitration
+                                    layer — 93% accuracy in 60 days.</p>
+                                <div class="tag-row"><span>Snowflake Cortex</span><span>Mistral</span><span>LLM-as-a-Judge</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> Prompted &amp; tuned Mistral on Snowflake Cortex; built an LLM-as-a-Judge layer to arbitrate near-identical intent classes.</li>
+                                    <li><strong>Impact:</strong> 93% accuracy in 60 days, adopted as the production intent router; won Team of the Year 2024–25.</li>
+                                    <li><strong>Stack:</strong> Snowflake Cortex, Mistral, Python, SQL.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card reveal">
-                        <p class="project-index">02</p>
-                        <h3>Recommendation Engine — Properties</h3>
-                        <p>Two-Tower recommendation model served through API Gateway, Lambda &amp; SageMaker
-                            Endpoints, with ECS Fargate/EKS orchestration, Redis caching and OpenSearch retrieval.</p>
-                        <div class="tag-row"><span>Two-Tower Model</span><span>SageMaker</span><span>EKS</span><span>Redis</span></div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">02</p>
+                                <h3>Recommendation Engine — Properties</h3>
+                                <p>Two-Tower recommendation model served through API Gateway, Lambda &amp; SageMaker
+                                    Endpoints, with ECS Fargate/EKS orchestration, Redis caching and OpenSearch
+                                    retrieval.</p>
+                                <div class="tag-row"><span>Two-Tower Model</span><span>SageMaker</span><span>EKS</span><span>Redis</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> Two-Tower model trained on property &amp; behavioral features; served real-time via SageMaker Endpoints behind API Gateway/Lambda.</li>
+                                    <li><strong>Impact:</strong> Low-latency retrieval at scale using Redis caching + OpenSearch, orchestrated across ECS Fargate and EKS.</li>
+                                    <li><strong>Stack:</strong> SageMaker, Redis, OpenSearch, EKS, Feature Store.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card reveal">
-                        <p class="project-index">03</p>
-                        <h3>Conversion &amp; Channel Optimization</h3>
-                        <p>CatBoost propensity models and cadence optimizers at Paytm, lifting conversion ~40% while
-                            cutting spend on ineffective channels.</p>
-                        <div class="tag-row"><span>CatBoost</span><span>Segmentation</span><span>Dashboards</span></div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">03</p>
+                                <h3>Conversion &amp; Channel Optimization</h3>
+                                <p>CatBoost propensity models and cadence optimizers at Paytm, lifting conversion
+                                    ~40% while cutting spend on ineffective channels.</p>
+                                <div class="tag-row"><span>CatBoost</span><span>Segmentation</span><span>Dashboards</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> CatBoost propensity scoring, a regression-based cadence optimizer, and behavioral segmentation for precision targeting.</li>
+                                    <li><strong>Impact:</strong> ~40% lift in conversion; unified omnichannel KPI dashboards cut decision latency by 45%.</li>
+                                    <li><strong>Stack:</strong> CatBoost, Python, dashboarding.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card reveal">
-                        <p class="project-index">04</p>
-                        <h3>Forecasting &amp; Fraud Detection</h3>
-                        <p>ARIMA/SARIMA/LSTM ensembles for business forecasting, plus ensemble fraud models reaching
-                            73% recall at Servify.</p>
-                        <div class="tag-row"><span>ARIMA</span><span>LSTM</span><span>Anomaly Detection</span></div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">04</p>
+                                <h3>Forecasting &amp; Fraud Detection</h3>
+                                <p>ARIMA/SARIMA/LSTM ensembles for business forecasting, plus ensemble fraud models
+                                    reaching 73% recall at Servify.</p>
+                                <div class="tag-row"><span>ARIMA</span><span>LSTM</span><span>Anomaly Detection</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> ARIMA/SARIMA/LSTM ensembles for demand forecasting; gradient-boosted ensembles for fraud scoring.</li>
+                                    <li><strong>Impact:</strong> 73% fraud recall; forecasts underpinned mission-critical business planning.</li>
+                                    <li><strong>Stack:</strong> ARIMA, SARIMA, LSTM, LightGBM, XGBoost.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card reveal">
-                        <p class="project-index">05</p>
-                        <h3>Computer Vision Pipelines</h3>
-                        <p>CNN classification and FastAI semantic segmentation models for automated crack &amp;
-                            defect detection.</p>
-                        <div class="tag-row"><span>TensorFlow</span><span>FastAI</span><span>CNN</span></div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">05</p>
+                                <h3>Computer Vision Pipelines</h3>
+                                <p>CNN classification and FastAI semantic segmentation models for automated crack
+                                    &amp; defect detection.</p>
+                                <div class="tag-row"><span>TensorFlow</span><span>FastAI</span><span>CNN</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> CNN classifiers and FastAI segmentation models trained on inspection imagery.</li>
+                                    <li><strong>Impact:</strong> Replaced manual visual inspection with automated, production-grade detection pipelines.</li>
+                                    <li><strong>Stack:</strong> TensorFlow, FastAI, CNN, OpenCV.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card reveal">
-                        <p class="project-index">06</p>
-                        <h3>Speech-to-Text Engine</h3>
-                        <p>DeepSpeech-based speech recognition pipeline showcasing audio NLP and deep learning
-                            architecture design.</p>
-                        <div class="tag-row"><span>DeepSpeech</span><span>NLP</span><span>Audio</span></div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">06</p>
+                                <h3>Speech-to-Text Engine</h3>
+                                <p>DeepSpeech-based speech recognition pipeline showcasing audio NLP and deep
+                                    learning architecture design.</p>
+                                <div class="tag-row"><span>DeepSpeech</span><span>NLP</span><span>Audio</span></div>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> DeepSpeech-based ASR pipeline for domain audio transcription and feature extraction.</li>
+                                    <li><strong>Highlight:</strong> Hands-on build of an in-house audio deep-learning stack beyond the typical DS toolkit.</li>
+                                    <li><strong>Stack:</strong> DeepSpeech, NLP, audio processing.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -528,9 +615,9 @@
                         <h3>Secondary School Certificate</h3>
                         <p class="meta">St. Francis D'Assisi High School · Mumbai · 2009 – 2010 · 84.36%</p>
                     </div>
-                    <div class="edu-card reveal">
+                    <div class="edu-card edu-card-wide reveal">
                         <h3>Certifications</h3>
-                        <ul>
+                        <ul class="edu-cert-list">
                             <li>Build Product 10x Faster with GenAI — Analytics Vidhya (Jul 2025)</li>
                             <li>Reimagining GenAI: Common Mistakes &amp; Best Practices</li>
                             <li>Ethics in the Age of Generative AI</li>
@@ -561,17 +648,6 @@
                         </span>
                         <span class="label">Email</span>
                         <strong>nsaurabh777@gmail.com</strong>
-                        <span class="copy-toast">Copied!</span>
-                    </a>
-                    <a class="contact-card" href="tel:+917977123456" data-copy="+917977123456">
-                        <span class="icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                                <path
-                                    d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.4 1 1 0 0 1-.25 1L6.6 10.8Z" />
-                            </svg>
-                        </span>
-                        <span class="label">Phone</span>
-                        <strong>+91 7977123456</strong>
                         <span class="copy-toast">Copied!</span>
                     </a>
                     <a class="contact-card" href="https://linkedin.com/in/nsaurabh777" target="_blank"

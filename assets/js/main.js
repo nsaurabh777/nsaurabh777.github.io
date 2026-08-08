@@ -174,6 +174,23 @@
     }
 
     /* ---------------------------------------------------------
+       Project card flip
+       --------------------------------------------------------- */
+    document.querySelectorAll('.project-card').forEach((card) => {
+        function toggleFlip() {
+            const flipped = card.classList.toggle('flipped');
+            card.setAttribute('aria-pressed', String(flipped));
+        }
+        card.addEventListener('click', toggleFlip);
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFlip();
+            }
+        });
+    });
+
+    /* ---------------------------------------------------------
        Copy to clipboard (contact cards)
        --------------------------------------------------------- */
     document.querySelectorAll('[data-copy]').forEach((el) => {
@@ -202,10 +219,14 @@
         let pointer = { x: null, y: null };
         let rafId = null;
         let visible = true;
+        let offsetX = 0;
+        let offsetY = 0;
 
         const NODE_COUNT_BASE = 70;
         const LINK_DIST = 130;
         const ACCENT = '61, 90, 254';
+        const PARALLAX_MAX = 18;
+        const PARALLAX_EASE = 0.06;
 
         function resize() {
             dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -227,6 +248,12 @@
         }
 
         function step() {
+            const targetX = pointer.x !== null ? ((pointer.x / width) - 0.5) * 2 * PARALLAX_MAX : 0;
+            const targetY = pointer.y !== null ? ((pointer.y / height) - 0.5) * 2 * PARALLAX_MAX : 0;
+            offsetX += (targetX - offsetX) * PARALLAX_EASE;
+            offsetY += (targetY - offsetY) * PARALLAX_EASE;
+            canvas.style.transform = `translate3d(${offsetX.toFixed(2)}px, ${offsetY.toFixed(2)}px, 0)`;
+
             ctx.clearRect(0, 0, width, height);
 
             nodes.forEach((n) => {
