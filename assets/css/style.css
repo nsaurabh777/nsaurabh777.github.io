@@ -1051,6 +1051,19 @@ main {
     border-bottom: 1px solid var(--border);
 }
 
+.edu-primary-details {
+    cursor: pointer;
+}
+
+.edu-primary-head {
+    list-style: none;
+    display: block;
+}
+
+.edu-primary-head::-webkit-details-marker {
+    display: none;
+}
+
 .edu-primary-head h3 {
     font-size: 1.3rem;
     margin-bottom: 6px;
@@ -1061,6 +1074,11 @@ main {
     font-weight: 600;
     font-size: 1rem;
     margin: 0 0 6px;
+    transition: color 0.2s var(--ease);
+}
+
+.edu-primary-head:hover .edu-university {
+    color: var(--accent);
 }
 
 .edu-primary-head .meta {
@@ -1076,43 +1094,14 @@ main {
     margin-top: 20px;
 }
 
-.edu-grade {
-    margin-top: 18px;
-}
-
-.edu-grade summary {
-    cursor: pointer;
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    width: fit-content;
-    padding: 6px 13px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    font-size: 0.76rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-3);
-    transition: border-color 0.2s var(--ease), color 0.2s var(--ease), background 0.2s var(--ease);
-}
-
-.edu-grade summary::-webkit-details-marker {
-    display: none;
-}
-
-.edu-grade summary:hover {
-    border-color: var(--accent-line);
-    color: var(--accent-bright);
-    background: var(--accent-soft);
-}
-
 .edu-grade-chevron {
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--text-3);
     transition: transform 0.25s var(--ease);
 }
 
-.edu-grade[open] .edu-grade-chevron {
+details[open] > summary .edu-grade-chevron {
     transform: rotate(90deg);
 }
 
@@ -1147,17 +1136,34 @@ main {
 }
 
 .edu-prior-list li {
+    font-size: 0.86rem;
+    color: var(--text-3);
+}
+
+.edu-prior-item {
+    cursor: pointer;
+}
+
+.edu-prior-item summary {
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px 16px;
-    font-size: 0.86rem;
-    color: var(--text-3);
+    transition: color 0.2s var(--ease);
 }
 
-.edu-prior-list .edu-grade-inline {
-    margin-top: 0;
+.edu-prior-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.edu-prior-item summary:hover {
+    color: var(--accent-bright);
+}
+
+.edu-prior-item .edu-grade-value {
+    margin-top: 6px;
 }
 
 .edu-certs .chip-grid {

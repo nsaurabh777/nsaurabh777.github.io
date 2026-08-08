@@ -434,7 +434,7 @@
                             <div class="project-card-face project-card-front">
                                 <p class="project-index">03</p>
                                 <h3>Conversion &amp; Channel Optimization</h3>
-                                <p>CatBoost propensity models and cadence optimizers at Paytm, lifting conversion
+                                <p>CatBoost propensity models and cadence optimizers, lifting conversion
                                     ~40% while cutting spend on ineffective channels.</p>
                                 <div class="tag-row"><span>CatBoost</span><span>Segmentation</span><span>Dashboards</span></div>
                                 <span class="project-flip-hint">Details →</span>
@@ -456,7 +456,7 @@
                                 <p class="project-index">04</p>
                                 <h3>Forecasting &amp; Fraud Detection</h3>
                                 <p>ARIMA/SARIMA/LSTM ensembles for business forecasting, plus ensemble fraud models
-                                    reaching 73% recall at Servify.</p>
+                                    reaching 73% recall.</p>
                                 <div class="tag-row"><span>ARIMA</span><span>LSTM</span><span>Anomaly Detection</span></div>
                                 <span class="project-flip-hint">Details →</span>
                             </div>
@@ -496,18 +496,18 @@
                         <div class="project-card-inner">
                             <div class="project-card-face project-card-front">
                                 <p class="project-index">06</p>
-                                <h3>Speech-to-Text Engine</h3>
-                                <p>DeepSpeech-based speech recognition pipeline showcasing audio NLP and deep
-                                    learning architecture design.</p>
-                                <div class="tag-row"><span>DeepSpeech</span><span>NLP</span><span>Audio</span></div>
+                                <h3>Async Reporting Engine</h3>
+                                <p>Django + RabbitMQ reporting endpoint that decoupled slow report
+                                    generation from the frontend via async job queuing.</p>
+                                <div class="tag-row"><span>Django</span><span>RabbitMQ</span><span>AWS S3</span></div>
                                 <span class="project-flip-hint">Details →</span>
                             </div>
                             <div class="project-card-face project-card-back">
                                 <p class="project-back-label">Behind the work</p>
                                 <ul class="project-detail-list">
-                                    <li><strong>Approach:</strong> DeepSpeech-based ASR pipeline for domain audio transcription and feature extraction.</li>
-                                    <li><strong>Highlight:</strong> Hands-on build of an in-house audio deep-learning stack beyond the typical DS toolkit.</li>
-                                    <li><strong>Stack:</strong> DeepSpeech, NLP, audio processing.</li>
+                                    <li><strong>Approach:</strong> Django endpoint validated requests and persisted status/response in MySQL, then queued generation via RabbitMQ instead of blocking synchronously, returning a UUID for the frontend to poll.</li>
+                                    <li><strong>Impact:</strong> Eliminated 4-5+ second synchronous waits on the frontend; completed reports were written to a private S3 bucket and served back via presigned URLs.</li>
+                                    <li><strong>Stack:</strong> Django, MySQL, RabbitMQ, AWS S3.</li>
                                 </ul>
                                 <span class="project-flip-hint">← Back</span>
                             </div>
@@ -617,38 +617,41 @@
                 <h2 class="section-title reveal">Education &amp; credentials</h2>
                 <div class="edu-stack" data-reveal-group>
                     <div class="edu-primary reveal">
-                        <div class="edu-primary-head">
-                            <h3>MBA Tech (IT)</h3>
-                            <p class="edu-university">NMIMS University <span aria-hidden="true">·</span> Mukesh
-                                Patel School of Technology Management &amp; Engineering</p>
-                            <p class="meta">Mumbai · 2012 – 2017</p>
-                        </div>
+                        <details class="edu-primary-details">
+                            <summary class="edu-primary-head">
+                                <h3>MBA Tech (IT)</h3>
+                                <p class="edu-university">NMIMS University <span aria-hidden="true">·</span> Mukesh
+                                    Patel School of Technology Management &amp; Engineering <span class="edu-grade-chevron" aria-hidden="true">›</span></p>
+                                <p class="meta">Mumbai · 2012 – 2017</p>
+                            </summary>
+                            <span class="edu-grade-value">CGPA 3.21 / 4</span>
+                        </details>
                         <div class="edu-course-tags">
                             <span class="chip">Business Intelligence</span>
                             <span class="chip">Analytics</span>
                             <span class="chip">IT Systems</span>
                         </div>
-                        <details class="edu-grade">
-                            <summary>Grade <span class="edu-grade-chevron" aria-hidden="true">›</span></summary>
-                            <span class="edu-grade-value">CGPA 3.21 / 4</span>
-                        </details>
                     </div>
 
                     <div class="edu-prior reveal">
                         <span class="edu-block-label">Earlier education</span>
                         <ul class="edu-prior-list">
                             <li>
-                                <span>Higher Secondary Certificate · Mithibai College · Mumbai · 2011 – 2012</span>
-                                <details class="edu-grade edu-grade-inline">
-                                    <summary>Grade <span class="edu-grade-chevron" aria-hidden="true">›</span></summary>
+                                <details class="edu-prior-item">
+                                    <summary>
+                                        <span>Higher Secondary Certificate · Mithibai College · Mumbai · 2011 – 2012</span>
+                                        <span class="edu-grade-chevron" aria-hidden="true">›</span>
+                                    </summary>
                                     <span class="edu-grade-value">74.67%</span>
                                 </details>
                             </li>
                             <li>
-                                <span>Secondary School Certificate · St. Francis D'Assisi High School · Mumbai ·
-                                    2009 – 2010</span>
-                                <details class="edu-grade edu-grade-inline">
-                                    <summary>Grade <span class="edu-grade-chevron" aria-hidden="true">›</span></summary>
+                                <details class="edu-prior-item">
+                                    <summary>
+                                        <span>Secondary School Certificate · St. Francis D'Assisi High School ·
+                                            Mumbai · 2009 – 2010</span>
+                                        <span class="edu-grade-chevron" aria-hidden="true">›</span>
+                                    </summary>
                                     <span class="edu-grade-value">84.36%</span>
                                 </details>
                             </li>
