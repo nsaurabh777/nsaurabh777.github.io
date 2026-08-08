@@ -826,7 +826,6 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 28px;
-    margin-bottom: 64px;
 }
 
 .project-card {
@@ -958,101 +957,211 @@ main {
     font-weight: 600;
 }
 
-.award-row {
+/* ============================================================
+   Impact
+   ============================================================ */
+.impact-ledger {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+}
+
+.impact-row {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
+    grid-template-columns: 40px 44px 1fr;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 6px;
+    border-bottom: 1px solid var(--border);
+    transition: padding-left 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
 }
 
-.award-card {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    padding: 18px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    background: var(--surface);
+.impact-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-bright);
+    transform: scaleY(0);
+    transition: transform 0.3s var(--ease);
 }
 
-.award-icon {
+.impact-row:hover,
+.impact-row:focus-within {
+    padding-left: 18px;
+    border-color: var(--border-strong);
+    background: linear-gradient(90deg, var(--accent-soft), transparent 65%);
+}
+
+.impact-row:hover::before,
+.impact-row:focus-within::before {
+    transform: scaleY(1);
+}
+
+.impact-index {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-3);
+    font-size: 0.82rem;
+}
+
+.impact-icon {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: var(--accent-soft);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
     color: var(--accent-bright);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
 }
 
-.award-card h4 {
-    font-size: 0.95rem;
-    margin-bottom: 3px;
+.impact-row:hover .impact-icon,
+.impact-row:focus-within .impact-icon {
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
 }
 
-.award-card p {
+.impact-body h3 {
+    font-size: 0.98rem;
+    margin-bottom: 4px;
+}
+
+.impact-body p {
     color: var(--text-3);
-    font-size: 0.84rem;
+    font-size: 0.86rem;
+    margin: 0;
 }
 
 /* ============================================================
    Education
    ============================================================ */
-.edu-grid {
+.edu-stack {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    gap: 40px;
 }
 
-.edu-card {
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    padding: 24px;
-    background: var(--surface);
+.edu-primary {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
 }
 
-.edu-card-wide {
-    grid-column: 1 / -1;
-}
-
-.edu-card .edu-cert-list {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    column-gap: 24px;
-}
-
-.edu-card h3 {
-    font-size: 1.02rem;
+.edu-primary-head h3 {
+    font-size: 1.3rem;
     margin-bottom: 6px;
 }
 
-.edu-card .meta {
+.edu-university {
+    color: var(--accent-bright);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 0 6px;
+}
+
+.edu-primary-head .meta {
     color: var(--text-3);
-    font-size: 0.86rem;
+    font-size: 0.88rem;
+    margin: 0;
 }
 
-.edu-card ul {
-    display: grid;
-    gap: 8px;
-    margin-top: 14px;
+.edu-course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
 }
 
-.edu-card ul li {
-    font-size: 0.9rem;
+.edu-grade {
+    margin-top: 18px;
+}
+
+.edu-grade summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    padding: 6px 13px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-3);
+    transition: border-color 0.2s var(--ease), color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.edu-grade summary::-webkit-details-marker {
+    display: none;
+}
+
+.edu-grade summary:hover {
+    border-color: var(--accent-line);
+    color: var(--accent-bright);
+    background: var(--accent-soft);
+}
+
+.edu-grade-chevron {
+    transition: transform 0.25s var(--ease);
+}
+
+.edu-grade[open] .edu-grade-chevron {
+    transform: rotate(90deg);
+}
+
+.edu-grade-value {
+    display: block;
+    margin-top: 10px;
     color: var(--text-2);
-    padding-left: 16px;
-    position: relative;
+    font-size: 0.9rem;
 }
 
-.edu-card ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--accent);
+.edu-block-label {
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+    margin-bottom: 16px;
+}
+
+.edu-prior {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.edu-prior-list {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.edu-prior-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    font-size: 0.86rem;
+    color: var(--text-3);
+}
+
+.edu-prior-list .edu-grade-inline {
+    margin-top: 0;
+}
+
+.edu-certs .chip-grid {
+    margin-bottom: 0;
 }
 
 /* ============================================================
@@ -1199,6 +1308,16 @@ footer a:hover {
     .hero {
         padding-top: 120px;
     }
+
+    .impact-row {
+        grid-template-columns: 30px 36px 1fr;
+        gap: 14px;
+    }
+
+    .edu-prior-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 520px) {
@@ -1213,6 +1332,14 @@ footer a:hover {
 
     .hero-actions .btn {
         width: 100%;
+    }
+
+    .impact-row {
+        grid-template-columns: 36px 1fr;
+    }
+
+    .impact-index {
+        display: none;
     }
 }
 
