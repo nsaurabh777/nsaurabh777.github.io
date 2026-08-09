@@ -188,13 +188,14 @@
                                 <li>Pioneered an <strong>LLM-as-a-Judge</strong> framework to arbitrate edge-case
                                     misclassifications between semantically similar intent classes, lifting decision
                                     confidence.</li>
-                                <li>Architected a cloud-native <strong>recommendation engine for Properties</strong>:
-                                    API Gateway → Lambda → SageMaker Endpoints for real-time inference, ALB → ECS
-                                    Fargate and EKS for orchestration, Redis for low-latency caching, SageMaker
-                                    Feature Stores, OpenSearch for retrieval, and a <strong>Two-Tower recommendation
-                                        model</strong> at the core.</li>
-                                <li>Recognized with Employee of the Quarter (Jul–Sep 2024) and nominated for Employee
-                                    of the Year for the Intent Classification project.</li>
+                                <li>Engineered a low-latency <strong>property recommendation platform</strong>,
+                                    evaluating serverless and containerised architectures across SageMaker, EKS, and
+                                    ECS Fargate to identify the optimal serving approach. Built a personalised
+                                    two-stage pipeline combining <strong>Two-Tower candidate generation</strong> with
+                                    <strong>LightGBM/XGBoost reranking</strong>, accelerated by OpenSearch vector
+                                    retrieval and Redis caching.</li>
+                                <li class="award">Recognized with Employee of the Quarter (Jul–Sep 2024) and
+                                    nominated for Employee of the Year for the Intent Classification project.</li>
                             </ul>
                         </div>
                     </div>
@@ -207,9 +208,10 @@
                                 <span class="meta">Aug 2022 – Mar 2024 · Pune (Remote)</span>
                             </div>
                             <ul class="highlight-list">
-                                <li>Architected a unified <strong>Snowflake data science fabric</strong> integrating
-                                    AWS SageMaker, Dataiku DSS, Hex, Tableau, and Snowsight for seamless team
-                                    collaboration.</li>
+                                <li>Architected a <strong>centrally governed Snowflake architecture</strong>
+                                    integrating AWS SageMaker, Dataiku DSS, Hex, Tableau, Streamlit, and Snowsight —
+                                    with role-based access, standardized naming conventions, and CI/CD-driven
+                                    Dev/Stage/Prod promotion to eliminate object redundancy.</li>
                                 <li>Led the strategic migration of core ML projects from Dataiku DSS to AWS
                                     SageMaker, uplifting scalability, version control, and cost efficiency.</li>
                                 <li>Designed an <strong>MLOps governance framework</strong> in Dataiku DSS, automating
@@ -217,8 +219,9 @@
                                 <li>Integrated Azure Artifact Registry with Snyk Enterprise across Dataiku, Hex, and
                                     SageMaker, hardening Python/PyPI supply-chain security in production.</li>
                                 <li>Automated drift-aware retraining triggers and built a real-time Tableau ops
-                                    monitoring dashboard for production pipelines. Received Employee of the Quarter
-                                    (Jan–Mar 2023).</li>
+                                    monitoring dashboard for production pipelines.</li>
+                                <li class="award">Recognized with Employee of the Quarter (Jan–Mar 2023) for driving
+                                    MLOps reliability and observability improvements.</li>
                             </ul>
                         </div>
                     </div>
@@ -235,7 +238,8 @@
                                 <li>Designed a regression-based optimizer for notification cadence and a behavioral
                                     segmentation algorithm for precision targeting.</li>
                                 <li>Unified omnichannel KPIs into interactive strategy dashboards, cutting decision
-                                    latency by 45%. Received the <strong>Rising Star</strong> award.</li>
+                                    latency by 45%.</li>
+                                <li class="award">Received the <strong>Rising Star</strong> award.</li>
                             </ul>
                         </div>
                     </div>
@@ -249,8 +253,11 @@
                             <ul class="highlight-list">
                                 <li>Delivered <strong>ARIMA / SARIMA / LSTM</strong> ensembles for mission-critical
                                     business forecasts.</li>
-                                <li>Built fraud detection pipelines achieving 73% recall, and pushed CNN &amp; FastAI
-                                    segmentation models into production for automated defect detection.</li>
+                                <li>Built an <strong>Isolation Forest</strong>-based fraud detection pipeline to flag
+                                    anomalous claims, achieving 73% recall.</li>
+                                <li>Pushed <strong>CNN &amp; FastAI segmentation models</strong> into production for
+                                    crack &amp; defect detection on phone images, cutting fraudulent post-damage plan
+                                    purchases by 97%.</li>
                                 <li>Designed data imputation accelerators with LightGBM &amp; XGBoost to stabilize
                                     downstream models.</li>
                             </ul>
@@ -266,8 +273,15 @@
                             <ul class="highlight-list">
                                 <li>Built a <strong>Django REST + RabbitMQ</strong> reporting fabric delivering
                                     real-time analytics with zero manual intervention.</li>
-                                <li>Partnered with supply chain to stand up IMS analytics and scraped specs/pricing
-                                    for 10,000+ smartphone SKUs.</li>
+                                <li>Partnered with supply chain to stand up <strong>IMS analytics</strong>,
+                                    improving inventory visibility and accuracy, speeding up replenishment decisions,
+                                    and reducing holding costs.</li>
+                                <li>Led <strong>physical-to-system inventory reconciliation</strong> efforts,
+                                    closing gaps between on-ground stock counts and IMS records.</li>
+                                <li>Built a scraping pipeline to capture specs and pricing across
+                                    <strong>10,000+ smartphone SKUs</strong>, eliminating manual lookups and giving
+                                    downstream teams a complete, always-current product catalog for pricing
+                                    decisions.</li>
                                 <li>Optimized SQL workloads, cutting data extraction latency by 60%.</li>
                             </ul>
                         </div>
@@ -464,7 +478,7 @@
                             <div class="project-card-face project-card-back">
                                 <p class="project-back-label">Behind the work</p>
                                 <ul class="project-detail-list">
-                                    <li><strong>Approach:</strong> ARIMA/SARIMA/LSTM ensembles for demand forecasting; gradient-boosted ensembles for fraud scoring.</li>
+                                    <li><strong>Approach:</strong> ARIMA/SARIMA/LSTM ensembles for demand forecasting; Isolation Forest for anomaly-based fraud scoring on claims.</li>
                                     <li><strong>Impact:</strong> 73% fraud recall; forecasts underpinned mission-critical business planning.</li>
                                     <li><strong>Stack:</strong> ARIMA, SARIMA, LSTM, LightGBM, XGBoost.</li>
                                 </ul>
@@ -476,17 +490,17 @@
                         <div class="project-card-inner">
                             <div class="project-card-face project-card-front">
                                 <p class="project-index">05</p>
-                                <h3>Computer Vision Pipelines</h3>
-                                <p>CNN classification and FastAI semantic segmentation models for automated crack
-                                    &amp; defect detection.</p>
+                                <h3>Crack &amp; Defect Detection</h3>
+                                <p>CNN classification and FastAI semantic segmentation models on phone images to
+                                    catch pre-existing damage and prevent fraudulent plan purchases.</p>
                                 <div class="tag-row"><span>TensorFlow</span><span>FastAI</span><span>CNN</span></div>
                                 <span class="project-flip-hint">Details →</span>
                             </div>
                             <div class="project-card-face project-card-back">
                                 <p class="project-back-label">Behind the work</p>
                                 <ul class="project-detail-list">
-                                    <li><strong>Approach:</strong> CNN classifiers and FastAI segmentation models trained on inspection imagery.</li>
-                                    <li><strong>Impact:</strong> Replaced manual visual inspection with automated, production-grade detection pipelines.</li>
+                                    <li><strong>Approach:</strong> CNN classifiers and FastAI segmentation models trained on phone inspection imagery to detect cracks and defects at point of plan purchase.</li>
+                                    <li><strong>Impact:</strong> Cut fraudulent post-damage plan purchases by 97%, replacing manual visual inspection with an automated, production-grade pipeline.</li>
                                     <li><strong>Stack:</strong> TensorFlow, FastAI, CNN, OpenCV.</li>
                                 </ul>
                                 <span class="project-flip-hint">← Back</span>
