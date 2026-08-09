@@ -181,9 +181,12 @@
             const flipped = card.classList.toggle('flipped');
             card.setAttribute('aria-pressed', String(flipped));
         }
-        card.addEventListener('click', toggleFlip);
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            toggleFlip();
+        });
         card.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
+            if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('a')) {
                 e.preventDefault();
                 toggleFlip();
             }

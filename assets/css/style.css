@@ -937,6 +937,25 @@ main {
     color: var(--text-3);
 }
 
+.project-live-link {
+    align-self: flex-start;
+    margin-top: 16px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-bright);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-bright);
+    text-decoration: none;
+    transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.project-live-link:hover,
+.project-live-link:focus-visible {
+    background: var(--accent-bright);
+    color: var(--bg);
+}
+
 .project-flip-hint {
     margin-top: auto;
     padding-top: 16px;

@@ -514,6 +514,28 @@
                             </div>
                         </div>
                     </div>
+                    <div class="project-card reveal" role="button" tabindex="0" aria-pressed="false">
+                        <div class="project-card-inner">
+                            <div class="project-card-face project-card-front">
+                                <p class="project-index">07</p>
+                                <h3>ShrinklitPDF</h3>
+                                <p>Streamlit tool that shrinks image-heavy PDFs to a target file size — or
+                                    custom DPI/JPEG quality — without touching document structure.</p>
+                                <div class="tag-row"><span>Streamlit</span><span>PyMuPDF</span><span>Pillow</span></div>
+                                <a class="project-live-link" href="https://shrinklitpdf-nu6vvrzi6iebppt7avdt6n.streamlit.app/" target="_blank" rel="noopener">Try it live ↗</a>
+                                <span class="project-flip-hint">Details →</span>
+                            </div>
+                            <div class="project-card-face project-card-back">
+                                <p class="project-back-label">Behind the work</p>
+                                <ul class="project-detail-list">
+                                    <li><strong>Approach:</strong> Extracts every embedded image via PyMuPDF (fitz), then iteratively resizes/recompresses with Pillow to hit either a target file size or manual DPI/JPEG-quality settings, reassembling the PDF with document structure intact.</li>
+                                    <li><strong>Impact:</strong> Personal utility for squeezing oversized PDFs under email/upload limits; also exposed as a Python API (<code>PDFCompressor</code> class) for scripted use beyond the web UI.</li>
+                                    <li><strong>Stack:</strong> Streamlit, PyMuPDF (fitz), Pillow, Python.</li>
+                                </ul>
+                                <span class="project-flip-hint">← Back</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
