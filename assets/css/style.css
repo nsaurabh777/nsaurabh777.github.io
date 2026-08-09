@@ -738,6 +738,23 @@ main {
     font-weight: 600;
 }
 
+.highlight-list li.award::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    top: 5px;
+    border-radius: 0;
+    transform: none;
+    background: var(--accent);
+    opacity: 0.85;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 3h12l-1 8a5 5 0 0 1-10 0L6 3Z'/%3E%3Cpath d='M9 21h6M12 16v5'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 3h12l-1 8a5 5 0 0 1-10 0L6 3Z'/%3E%3Cpath d='M9 21h6M12 16v5'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
 /* ============================================================
    Skills
    ============================================================ */
