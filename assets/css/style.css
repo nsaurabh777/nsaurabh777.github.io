@@ -484,6 +484,13 @@ main {
     margin-bottom: 40px;
 }
 
+.hero-lead {
+    display: block;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -568,6 +575,13 @@ main {
     grid-template-columns: 1.3fr 1fr;
     gap: 56px;
     align-items: start;
+}
+
+.about-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
 }
 
 .about-text {
