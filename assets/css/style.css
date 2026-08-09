@@ -1232,32 +1232,9 @@ details[open] > summary .edu-grade-chevron {
 }
 
 .contact-card span.label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-3);
-}
-
-.contact-card strong {
     font-size: 0.92rem;
     font-weight: 600;
-    word-break: break-word;
-}
-
-.copy-toast {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.7rem;
-    color: var(--accent-bright);
-    opacity: 0;
-    transition: opacity 0.25s var(--ease);
-    pointer-events: none;
-}
-
-.copy-toast.show {
-    opacity: 1;
+    color: var(--text);
 }
 
 /* ============================================================
