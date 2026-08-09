@@ -191,24 +191,6 @@
     });
 
     /* ---------------------------------------------------------
-       Copy to clipboard (contact cards)
-       --------------------------------------------------------- */
-    document.querySelectorAll('[data-copy]').forEach((el) => {
-        el.addEventListener('click', (e) => {
-            const value = el.dataset.copy;
-            if (!value || !navigator.clipboard) return;
-            e.preventDefault();
-            navigator.clipboard.writeText(value).then(() => {
-                const toast = el.querySelector('.copy-toast');
-                if (!toast) return;
-                toast.classList.add('show');
-                toast.textContent = 'Copied!';
-                setTimeout(() => toast.classList.remove('show'), 1400);
-            });
-        });
-    });
-
-    /* ---------------------------------------------------------
        Hero network canvas
        --------------------------------------------------------- */
     const canvas = document.getElementById('networkCanvas');
