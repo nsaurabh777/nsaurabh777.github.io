@@ -122,11 +122,12 @@ export default {
         const raw = await upstream.text();
         if (!upstream.ok) {
           console.error("Gemini error", upstream.status, raw.slice(0, 500));
+          const quotaHit =
+            upstream.status === 429 || /RESOURCE_EXHAUSTED|quota/i.test(raw);
           send("error", {
-            error:
-              upstream.status === 429
-                ? "The assistant is busy right now. Please try again shortly."
-                : "Something went wrong answering that. Please try again, or reach Saurabh via the contact links.",
+            error: quotaHit
+              ? "This assistant has reached its usage limit for now. Please try again later, or reach Saurabh via the contact links below."
+              : "Something went wrong answering that. Please try again, or reach Saurabh via the contact links.",
           });
           return;
         }

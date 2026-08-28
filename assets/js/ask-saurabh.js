@@ -157,11 +157,20 @@
             });
 
             if (!res.ok || !res.body) {
-                let msg = 'The assistant is unavailable right now. Please try again later.';
+                let msg = '';
                 try {
                     const data = await res.json();
                     if (data && data.error) msg = data.error;
                 } catch (_) {}
+                if (!msg) {
+                    if (res.status === 429) {
+                        msg = "This assistant has hit its usage limit for now. Please try again later, or reach Saurabh directly at nsaurabh777.ai@gmail.com.";
+                    } else if (res.status === 402 || res.status === 403) {
+                        msg = "The assistant is offline right now — its free API quota may be exhausted. Please reach Saurabh directly at nsaurabh777.ai@gmail.com.";
+                    } else {
+                        msg = "The assistant is unavailable right now. Please try again later, or email nsaurabh777.ai@gmail.com.";
+                    }
+                }
                 throw new Error(msg);
             }
 
@@ -183,7 +192,7 @@
         } catch (err) {
             bubble.classList.remove('as-pending');
             bubble.classList.add('as-error');
-            renderInto(bubble, err.message || 'Something went wrong. Please try again.');
+            renderInto(bubble, friendlyError(err));
             // drop the failed user turn so retries don't compound
             if (history.length && history[history.length - 1].role === 'user') history.pop();
         } finally {
@@ -194,6 +203,24 @@
     });
 
     /* ---------- helpers ---------- */
+    function friendlyError(err) {
+        // A raw fetch() rejection (TypeError) means the request never reached the
+        // Worker: it's offline, blocked by CORS (e.g. opening this file directly
+        // from disk), or the network is down. Anything else already carries a
+        // human-readable message from the server or the SSE error event.
+        const networkFail =
+            err instanceof TypeError ||
+            /failed to fetch|networkerror|load failed|network request failed/i.test(
+                err && err.message ? err.message : '',
+            );
+        if (networkFail) {
+            return "I couldn't reach the assistant service. It may be temporarily offline or over its usage limit. Please try again later, or email nsaurabh777.ai@gmail.com.";
+        }
+        return err && err.message
+            ? err.message
+            : 'Something went wrong. Please try again.';
+    }
+
     function addMessage(role, text, opts = {}) {
         const wrap = el('div', { class: `as-msg as-${role}` });
         const bubble = el('div', { class: 'as-bubble' + (opts.pending ? ' as-pending' : '') });
