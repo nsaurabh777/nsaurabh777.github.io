@@ -13,6 +13,10 @@ browser widget ──POST──▶ Cloudflare Worker ──▶ Gemini API (gemin
 The Worker calls Gemini's non-streaming `generateContent`, then re-chunks the
 answer back to the browser as SSE so the widget still fills in progressively.
 
+> **Deploying or running locally?** See [`RUNBOOK.md`](./RUNBOOK.md) for
+> step-by-step local + Cloudflare procedures, a deploy checklist, and
+> troubleshooting.
+
 Both sides are free: Cloudflare Workers (free plan) and the Gemini API free tier
 (no credit card; ~20 requests/min for `gemini-3.6-flash`).
 
