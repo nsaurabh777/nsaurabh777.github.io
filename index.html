@@ -758,6 +758,13 @@
     </footer>
 
     <script src="assets/js/main.js" defer></script>
+
+    <!-- "Ask Saurabh" chat widget. Point this at your deployed Cloudflare Worker
+         (see /ask-saurabh/README.md). The widget hides itself until it is set. -->
+    <script>
+        window.ASK_SAURABH_ENDPOINT = 'https://ask-saurabh.portfolio-rag.workers.dev';
+    </script>
+    <script src="assets/js/ask-saurabh.js" defer></script>
 </body>
 
 </html>
