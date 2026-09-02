@@ -1430,6 +1430,38 @@ footer a:hover {
     flex: none;
 }
 
+.as-launcher span {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Small screens: after the user scrolls, collapse the pill to a round icon
+   button so it stops covering content at the bottom of the viewport. */
+@media (max-width: 600px) {
+    .as-launcher {
+        gap: 0;
+        transition: transform 0.25s var(--ease), background 0.2s var(--ease),
+            padding 0.3s var(--ease);
+    }
+
+    .as-launcher span {
+        max-width: 180px;
+        margin-left: 9px;
+        transition: max-width 0.3s var(--ease), margin-left 0.3s var(--ease),
+            opacity 0.2s var(--ease);
+    }
+
+    .as-launcher--compact {
+        padding: 13px;
+    }
+
+    .as-launcher--compact span {
+        max-width: 0;
+        margin-left: 0;
+        opacity: 0;
+    }
+}
+
 .as-panel {
     position: fixed;
     right: clamp(12px, 4vw, 32px);
@@ -1659,6 +1691,10 @@ footer a:hover {
     }
     .as-launcher:hover {
         transform: none;
+    }
+    .as-launcher,
+    .as-launcher span {
+        transition: none;
     }
     .as-dots i {
         animation: none;

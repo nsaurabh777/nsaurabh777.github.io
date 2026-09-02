@@ -6,6 +6,12 @@
 (() => {
     'use strict';
 
+    if (window.ASK_SAURABH_ENABLED === false) {
+        // Feature switched off via the config flag in index.html.
+        console.info('[Ask Saurabh] widget disabled: window.ASK_SAURABH_ENABLED is false.');
+        return;
+    }
+
     const ENDPOINT = (window.ASK_SAURABH_ENDPOINT || '').trim();
     if (!ENDPOINT || ENDPOINT.includes('YOUR-WORKER')) {
         // Not configured yet — stay invisible rather than show a broken button.
@@ -94,6 +100,7 @@
         panel.hidden = false;
         launcher.setAttribute('aria-expanded', 'true');
         document.body.classList.add('as-open');
+        launcher.classList.remove('as-launcher--compact');
         requestAnimationFrame(() => panel.classList.add('as-visible'));
         inputEl.focus();
     }
@@ -104,6 +111,7 @@
         const done = () => {
             panel.hidden = true;
             panel.removeEventListener('transitionend', done);
+            syncCompact();
         };
         panel.addEventListener('transitionend', done);
         setTimeout(done, 300);
@@ -115,6 +123,25 @@
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !panel.hidden) closePanel();
     });
+
+    /* ---------- shrink the launcher to an icon once the user scrolls ----------
+       Only visually relevant on small screens (see the CSS media query), where
+       the full pill overlaps content near the bottom of the viewport. */
+    const COMPACT_AFTER = 24; // px scrolled
+    let compactRAF = 0;
+    function syncCompact() {
+        compactRAF = 0;
+        const compact = window.scrollY > COMPACT_AFTER && panel.hidden;
+        launcher.classList.toggle('as-launcher--compact', compact);
+    }
+    window.addEventListener(
+        'scroll',
+        () => {
+            if (!compactRAF) compactRAF = requestAnimationFrame(syncCompact);
+        },
+        { passive: true },
+    );
+    syncCompact();
 
     /* ---------- input UX ---------- */
     function syncSend() {
