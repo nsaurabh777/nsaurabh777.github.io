@@ -160,7 +160,7 @@
             });
         });
 
-        document.querySelectorAll('.skill-card, .timeline-card').forEach((card) => {
+        document.querySelectorAll('.timeline-card').forEach((card) => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const px = (e.clientX - rect.left) / rect.width - 0.5;

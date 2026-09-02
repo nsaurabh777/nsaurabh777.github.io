@@ -399,6 +399,14 @@ main {
     transform: translateY(0);
 }
 
+/* Keep not-yet-revealed content (invisible + offset) out of text selection
+   and pointer hit-testing so drag-selection does not grab hidden elements. */
+.reveal:not(.is-visible) {
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
 /* ============================================================
    Hero
    ============================================================ */
@@ -770,13 +778,13 @@ main {
     border: 1px solid var(--border);
     padding: 24px;
     background: var(--surface);
-    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
-    transform-style: preserve-3d;
-    will-change: transform;
+    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
 }
 
 .skill-card:hover {
     border-color: var(--border-strong);
+    background: var(--surface-2);
+    transform: translateY(-3px);
 }
 
 .skill-card h3 {
@@ -920,6 +928,24 @@ main {
 .project-card-back {
     transform: rotateY(180deg);
     overflow-y: auto;
+}
+
+/* Only the face currently facing the viewer takes pointer events, so the
+   hidden (mirrored) face never eats clicks over part of the card. */
+.project-card-front {
+    pointer-events: auto;
+}
+
+.project-card-back {
+    pointer-events: none;
+}
+
+.project-card.flipped .project-card-front {
+    pointer-events: none;
+}
+
+.project-card.flipped .project-card-back {
+    pointer-events: auto;
 }
 
 .project-index {
