@@ -778,13 +778,13 @@ main {
     border: 1px solid var(--border);
     padding: 24px;
     background: var(--surface);
-    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
+    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 .skill-card:hover {
     border-color: var(--border-strong);
-    background: var(--surface-2);
-    transform: translateY(-3px);
 }
 
 .skill-card h3 {
@@ -1511,6 +1511,14 @@ footer a:hover {
 .as-panel.as-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+/* When closed the panel must leave layout and hit-testing entirely, otherwise
+   the invisible fixed box keeps swallowing hover, clicks, and text selection
+   over whatever content sits under the bottom-right of the viewport. The
+   `.as-panel` display rule above outranks the UA `[hidden]` rule, so restore it. */
+.as-panel[hidden] {
+    display: none;
 }
 
 .as-head {

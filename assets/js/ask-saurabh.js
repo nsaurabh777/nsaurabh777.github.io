@@ -101,6 +101,9 @@
         launcher.setAttribute('aria-expanded', 'true');
         document.body.classList.add('as-open');
         launcher.classList.remove('as-launcher--compact');
+        // Panel goes display:none -> flex here; force a style flush before adding
+        // the class so the opacity/transform transition actually runs on open.
+        void panel.offsetWidth;
         requestAnimationFrame(() => panel.classList.add('as-visible'));
         inputEl.focus();
     }
