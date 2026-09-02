@@ -399,6 +399,14 @@ main {
     transform: translateY(0);
 }
 
+/* Keep not-yet-revealed content (invisible + offset) out of text selection
+   and pointer hit-testing so drag-selection does not grab hidden elements. */
+.reveal:not(.is-visible) {
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
 /* ============================================================
    Hero
    ============================================================ */
@@ -920,6 +928,24 @@ main {
 .project-card-back {
     transform: rotateY(180deg);
     overflow-y: auto;
+}
+
+/* Only the face currently facing the viewer takes pointer events, so the
+   hidden (mirrored) face never eats clicks over part of the card. */
+.project-card-front {
+    pointer-events: auto;
+}
+
+.project-card-back {
+    pointer-events: none;
+}
+
+.project-card.flipped .project-card-front {
+    pointer-events: none;
+}
+
+.project-card.flipped .project-card-back {
+    pointer-events: auto;
 }
 
 .project-index {
@@ -1485,6 +1511,14 @@ footer a:hover {
 .as-panel.as-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+/* When closed the panel must leave layout and hit-testing entirely, otherwise
+   the invisible fixed box keeps swallowing hover, clicks, and text selection
+   over whatever content sits under the bottom-right of the viewport. The
+   `.as-panel` display rule above outranks the UA `[hidden]` rule, so restore it. */
+.as-panel[hidden] {
+    display: none;
 }
 
 .as-head {
